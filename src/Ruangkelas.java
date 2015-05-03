@@ -8,113 +8,166 @@
  * @author NirmalaKarim
  */
 public class Ruangkelas {
-    private String Nama_ruang;
-    private String Lokasi_ruang;
-    private String Prodi;
-    private int Panjang_ruang;
-    private int Lebar_ruang;
-    private int Jumlah_kursi;
-    private int Jumlah_meja;
-    private int Jumlah_jendela;
-    private int jumlah_pintu;
+        private String lantai;
+    private String dinding;
+    private String atap;
+    private String pintu;
+    private String jendela;
+    private String sirkulasi_udara;
+    private String pencayahan;
+    private String kelembapan;
+    private String suhu;
+    private String kebisingan;
+    private String bau;
+    private String kebocoran;
+    private String keausan;
+    private String kerusakan;
+    private String kekokohan;
+    private String kunci_pintu;
+    private String kunci_jendela;
+    private String bahaya;
 
-    public String getNama_ruang() {
-        return Nama_ruang;
-    }
-
-    public void setNama_ruang(String Nama_ruang) {
-        this.Nama_ruang = Nama_ruang;
-    }
-
-    public String getLokasi_ruang() {
-        return Lokasi_ruang;
-    }
-
-    public void setLokasi_ruang(String Lokasi_ruang) {
-        this.Lokasi_ruang = Lokasi_ruang;
+    public String getLantai() {
+        return lantai;
     }
 
-    public String getProdi() {
-        return Prodi;
+    public void setLantai(String lantai) {
+        this.lantai = lantai;
     }
 
-    public void setProdi(String Prodi) {
-        this.Prodi = Prodi;
+    public String getDinding() {
+        return dinding;
     }
 
-    public int getPanjang_ruang() {
-        return Panjang_ruang;
+    public void setDinding(String dinding) {
+        this.dinding = dinding;
     }
 
-    public void setPanjang_ruang(int Panjang_ruang) {
-        this.Panjang_ruang = Panjang_ruang;
+    public String getAtap() {
+        return atap;
     }
 
-    public int getLebar_ruang() {
-        return Lebar_ruang;
+    public void setAtap(String atap) {
+        this.atap = atap;
     }
 
-    public void setLebar_ruang(int Lebar_ruang) {
-        this.Lebar_ruang = Lebar_ruang;
+    public String getPintu() {
+        return pintu;
     }
 
-    public int getJumlah_kursi() {
-        return Jumlah_kursi;
+    public void setPintu(String pintu) {
+        this.pintu = pintu;
     }
 
-    public void setJumlah_kursi(int Jumlah_kursi) {
-        this.Jumlah_kursi = Jumlah_kursi;
+    public String getJendela() {
+        return jendela;
     }
 
-    public int getJumlah_meja() {
-        return Jumlah_meja;
+    public void setJendela(String jendela) {
+        this.jendela = jendela;
     }
 
-    public void setJumlah_meja(int Jumlah_meja) {
-        this.Jumlah_meja = Jumlah_meja;
+    public String getSirkulasi_udara() {
+        return sirkulasi_udara;
     }
 
-    public int getJumlah_jendela() {
-        return Jumlah_jendela;
+    public void setSirkulasi_udara(String sirkulasi_udara) {
+        this.sirkulasi_udara = sirkulasi_udara;
     }
 
-    public void setJumlah_jendela(int Jumlah_jendela) {
-        this.Jumlah_jendela = Jumlah_jendela;
+    public String getPencayahan() {
+        return pencayahan;
     }
 
-    public int getJumlah_pintu() {
-        return jumlah_pintu;
+    public void setPencayahan(String pencayahan) {
+        this.pencayahan = pencayahan;
     }
 
-    public void setJumlah_pintu(int jumlah_pintu) {
-        this.jumlah_pintu = jumlah_pintu;
+    public String getKelembapan() {
+        return kelembapan;
     }
-    
-    double luas (){        
-        return getPanjang_ruang()*getLebar_ruang();
+
+    public void setKelembapan(String kelembapan) {
+        this.kelembapan = kelembapan;
     }
-    void bentuk (){
-        if (getPanjang_ruang()!=luas()){
-            System.out.println("persegi panjang dan sesuai");
-        }else {
-            System.out.println("bukan persegi panjang");
-        }
+
+    public String getSuhu() {
+        return suhu;
     }
-    double rasio(){
-        return luas()/getJumlah_kursi();        
+
+    public void setSuhu(String suhu) {
+        this.suhu = suhu;
     }
-    void analisis (){
-        System.out.println("Jumlah pintu : "+getJumlah_pintu());
-        if(getJumlah_pintu()>=2){
-            System.out.println("sesuai");
-        } else {
-            System.out.println("tidak sesuai");
-        }
-        System.out.println("Jumlah jendela : "+getJumlah_jendela());
-        if(getJumlah_jendela()>=1){
-            System.out.println("sesuai");
-        }else{
-            System.out.println("tidak sesuai");
-        }
+
+    public String getKebisingan() {
+        return kebisingan;
+    }
+
+    public void setKebisingan(String kebisingan) {
+        this.kebisingan = kebisingan;
+    }
+
+    public String getBau() {
+        return bau;
+    }
+
+    public void setBau(String bau) {
+        this.bau = bau;
+    }
+
+    public String getKebocoran() {
+        return kebocoran;
+    }
+
+    public void setKebocoran(String kebocoran) {
+        this.kebocoran = kebocoran;
+    }
+
+    public String getKeausan() {
+        return keausan;
+    }
+
+    public void setKeausan(String keausan) {
+        this.keausan = keausan;
+    }
+
+    public String getKerusakan() {
+        return kerusakan;
+    }
+
+    public void setKerusakan(String kerusakan) {
+        this.kerusakan = kerusakan;
+    }
+
+    public String getKekokohan() {
+        return kekokohan;
+    }
+
+    public void setKekokohan(String kekokohan) {
+        this.kekokohan = kekokohan;
+    }
+
+    public String getKunci_pintu() {
+        return kunci_pintu;
+    }
+
+    public void setKunci_pintu(String kunci_pintu) {
+        this.kunci_pintu = kunci_pintu;
+    }
+
+    public String getKunci_jendela() {
+        return kunci_jendela;
+    }
+
+    public void setKunci_jendela(String kunci_jendela) {
+        this.kunci_jendela = kunci_jendela;
+    }
+
+    public String getBahaya() {
+        return bahaya;
+    }
+
+    public void setBahaya(String bahaya) {
+        this.bahaya = bahaya;
     }
 }
