@@ -102,7 +102,6 @@ public class Lingkungan {
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setLantai(scan.nextInt());
-        //int pilih1 = scan.nextInt();
         switch(getLantai()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -116,7 +115,6 @@ public class Lingkungan {
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setDinding(scan.nextInt());
-        //int pilih2 = scan.nextInt();        
         switch(getDinding()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -124,6 +122,7 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
+        
         System.out.println("C. Bagaimana keaadaan atap");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
@@ -136,10 +135,12 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
+        
         System.out.println("D. Bagaimana keaadaan pintu");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
+        setPintu(scan.nextInt());
         switch(getPintu()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -147,6 +148,7 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
+        
         System.out.println("E. Bagaimana keaadaan jendela");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");

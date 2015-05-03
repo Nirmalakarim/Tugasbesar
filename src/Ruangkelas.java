@@ -114,6 +114,7 @@ public class Ruangkelas {
         if(getJumlah_jendela()>=1){
             System.out.println("sesuai");
         }else{
+            
             System.out.println("tidak sesuai");
         }
     }
