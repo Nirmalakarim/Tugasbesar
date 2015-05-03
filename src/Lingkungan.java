@@ -1,10 +1,10 @@
+
+import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-import java.util.Scanner;
 
 /**
  *
@@ -96,7 +96,6 @@ public class Lingkungan {
     
   
     void kebersihan (){
-        //int pilih;
         
         System.out.println("A. Bagaimana keaadaan lantai");
         System.out.println("1. bersih ");
@@ -111,12 +110,6 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
-        /*String kl = scan.next();
-        if(kl.equals(getLantai())){
-            System.out.println("sesuai");
-        }else {
-            System.out.println("tidak sesuai");
-        }*/
         
         System.out.println("B. Bagaimana keaadaan dinding");
         System.out.println("1. bersih");
@@ -131,19 +124,11 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
-        /*String kd = scan.next();
-        if(kd.equals(getDinding())){
-            System.out.println("sesuai");
-        } else{
-            System.out.println("tidak sesuai");
-        }*/
-        
         System.out.println("C. Bagaimana keaadaan atap");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setAtap(scan.nextInt());
-        //int pilih3 = scan.nextInt();
         switch(getAtap()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -151,19 +136,10 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
-        /*String ka = scan.next();
-        if(ka.equals(getAtap())){
-            System.out.println("sesuai");
-        } else{
-            System.out.println("tidak sesuai");
-        }*/
-        
         System.out.println("D. Bagaimana keaadaan pintu");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
-        setPintu(scan.nextInt());
-        //int pilih4 = scan.nextInt();
         switch(getPintu()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -171,19 +147,11 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
-        /*String kp = scan.next();
-        if(kp.equals(getPintu())){
-            System.out.println("sesuai");
-        } else{
-            System.out.println("tidak sesuai");
-        }*/
-        
         System.out.println("E. Bagaimana keaadaan jendela");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setJendela(scan.nextInt());
-        //int pilih5 = scan.nextInt();
         switch(getJendela()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -191,15 +159,8 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
-        /*String kj = scan.next();
-        if(kj.equals(getJendela())){
-            System.out.println("sesuai");
-        } else{
-            System.out.println("tidak sesuai");
-        } */   
     }
-    void sirkualsi_udara (){
-        //int pilih = scan.nextInt();        
+    void sirkualsi_udara (){    
         switch(getSirkulasi_udara()){
             case 1:
                 System.out.println("sesuai \n");        
@@ -207,12 +168,6 @@ public class Lingkungan {
             case 2:
                 System.out.println("tidak sesuai \n");
         }
-        /*String ks = scan.next();
-        if (ks.equals(getSirkulasi_udara())){
-            System.out.println("sesuai");
-        } else {
-            System.out.println("tidak sesuai");
-        }*/
     }
     void pencayahan(){
         if(getPencayahan()>=250 && getPencayahan()<=350){
