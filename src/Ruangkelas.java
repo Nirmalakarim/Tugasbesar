@@ -108,18 +108,11 @@ public class Ruangkelas {
     }
     String analisis(){
         String satu;
-                if(getJumlah_pintu() >=2){
+                if(getJumlah_pintu() >=2||getJumlah_jendela()>1){
                     satu="sesuai";
                 }
                 else{
                     satu="Tidak sesuai";
-                }
-                
-                if(getJumlah_jendela() >=1){
-                    satu="Sesuai";
-                }
-                else{
-                    satu="Tidak Sesuai";
                 }
                 return satu;
     }
