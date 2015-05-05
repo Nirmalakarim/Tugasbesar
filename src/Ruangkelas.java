@@ -93,29 +93,35 @@ public class Ruangkelas {
     double luas (){        
         return getPanjang_ruang()*getLebar_ruang();
     }
-    void bentuk (){
-        if (getPanjang_ruang()!=luas()){
-            System.out.println("persegi panjang dan sesuai");
-        }else {
-            System.out.println("bukan persegi panjang");
+    String bentuk(){
+        String pilih;
+        if(getPanjang_ruang()!=luas()){
+            pilih="persegi panjang dan sesuai";
+        } else{
+            pilih="bukan persegi panjang";
         }
+        return pilih;
     }
+    
     double rasio(){
         return luas()/getJumlah_kursi();        
     }
-    void analisis (){
-        System.out.println("Jumlah pintu : "+getJumlah_pintu());
-        if(getJumlah_pintu()>=2){
-            System.out.println("sesuai");
-        } else {
-            System.out.println("tidak sesuai");
-        }
-        System.out.println("Jumlah jendela : "+getJumlah_jendela());
-        if(getJumlah_jendela()>=1){
-            System.out.println("sesuai");
-        }else{
-            
-            System.out.println("tidak sesuai");
-        }
+    String analisis(){
+        String satu;
+                if(getJumlah_pintu() >=2){
+                    satu="sesuai";
+                }
+                else{
+                    satu="Tidak sesuai";
+                }
+                
+                if(getJumlah_jendela() >=1){
+                    satu="Sesuai";
+                }
+                else{
+                    satu="Tidak Sesuai";
+                }
+                return satu;
     }
+
 }
