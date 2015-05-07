@@ -95,96 +95,77 @@ public class Kenyamanan {
         this.bahaya = bahaya;
     }
       
-    void kebisingan(){
-        switch(getKebisingan()){
-            case 1:
-                System.out.println("tidak sesuai \n");
-                break;
-            case 2:
-                System.out.println("sesuai \n");
+    String kebisingan(){
+        String pilih;
+        if(getKebisingan()==2){
+            pilih = "sessuai";
+        }else{
+            pilih = "tidak sesuai";
         }
+        return pilih;        
+    }
+    String bau(){
+        String pilih;
+        if(getBau()==2){
+            pilih="sesuai";
+        }else{
+            pilih = "tidak sesuai";
+        }
+        return pilih;
         
     }
-    void bau(){
-        switch(getBau()){
-            case 1:
-                System.out.println("tidak sesuai \n");
-                break;
-            case 2:
-                System.out.println("sesuai \n");
+    String kebocoran (){
+        String pilih;
+        if(getKebocoran()==2){
+            pilih="sesuai";
+        } else{
+            pilih="tidak sesuai";
         }
-        
+        return pilih;
     }
-    void kebocoran (){
-        switch(getKebocoran()){
-            case 1:
-                System.out.println("tidak sesuai \n");
-                break;
-            case 2:
-                System.out.println("sesuai \n");
+    String keausan(){
+        String pilih;
+        if(getKeausan()==2){
+            pilih="sesuai";
+        } else{
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
-    void keausan(){
-        switch(getKeausan()){
-            case 1:
-                System.out.println("tidak sesuai \n");
-                break;
-            case 2:
-                System.out.println("sesuai \n");
+    String kerusakan(){
+        String pilih;
+        if(getKerusakan()==2){
+            pilih="sesuai";
+        } else{
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
-    void kerusakan(){
-        switch(getKerusakan()){
-            case 1:
-                System.out.println("tidak sesuai \n");
-                break;
-            case 2:
-                System.out.println("sesuai \n");
+    String kekokohan(){
+        String pilih;
+        if(getKekokohan()==1){
+            pilih="sesuai";
+        } else{
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
-    void kekokohan(){
-        switch(getKekokohan()){
-            case 1:
-                System.out.println("sesuai \n");
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
+    String kunci(){
+        String pilih;
+        if(getKunci_pintu()==1 && getKunci_jendela()==1){
+            pilih="sesuai";
+        } else{
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
-    void kunci(){
-        System.out.println("G. Bagaimana keaadaan kunci pintu");
-        System.out.println("1. Ada");
-        System.out.println("2. Tidak ada");
-        System.out.print("Jawab : ");
-        setKunci_pintu(scan.nextInt());
-        switch(getKunci_pintu()){
-            case 1:
-                System.out.println("sesuai \n");
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
+    String keamanan(){
+        String pilih;
+        if(getBahaya()==1){
+            pilih="sesuai";
+        } else{
+            pilih="tidak sesuai";
         }
-        
-        System.out.println("H. Bagaimana keaadaan kunci jendela");
-        System.out.println("1. Ada");
-        System.out.println("2. Tidak ada");
-        System.out.print("Jawab : ");
-        setKunci_jendela(scan.nextInt());
-        switch(getKunci_jendela()){
-            case 1:
-                System.out.println("sesuai \n");
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
-        }
-    }
-    void keamanan(){
-        switch(getBahaya()){
-            case 1:
-                System.out.println("sesuai \n");
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
-        }
+        return pilih;
     }
 }
