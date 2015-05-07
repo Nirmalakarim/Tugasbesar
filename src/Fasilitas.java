@@ -14,6 +14,11 @@ public class Fasilitas {
  int Kondisisteker, Kondisilampu,Kondisikipasangin, KondisiAC, KondisiCCTV;
 
 
+void test(){
+    
+} 
+ 
+ 
     public String getBandwith() {
         return Bandwith;
     }
