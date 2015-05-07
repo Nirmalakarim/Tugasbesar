@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -9,64 +12,28 @@
  */
 public class Fasilitas {
      
- private String Posisisteker, PosisikabelLCD, KondisiLCD, Posisilampu,Posisikipasangin,PosisiAC,SSID,Bandwith,PosisiCCTV;
- int Jumlahsteker,JumlahkabelLCD, Jumlahlampu, Jumlahkipasangin,JumlahAC,JumlahCCTV;
- int Kondisisteker, Kondisilampu,Kondisikipasangin, KondisiAC, KondisiCCTV;
-
-
-void test(){
-    
-} 
+Scanner scan = new Scanner(System.in);
+    private int Jumlahsteker;
+    private int kondisisteker;
+    private int posisisteker;
+    private int jumlahkabelLCD;
+    private int kondisikabelLCD;
+    private int posisikabelLCD;
+    private int jumlahlampu;
+    private int kondisilampu;
+    private int posisilampu;
+    private int jumlahkipasangin;
+    private int kondisikipasangin;
+    private int posisikipasangin;
+    private int jumlahAC;
+    private int kondisiAC;
+    private int posisiAC;
+    private int SSID;
+    private int bandwidth;
+    private int jumlahCCTV;
+    private int kondisiCCTV;
+    private int posisiCCTV; 
  
- 
-    public String getBandwith() {
-        return Bandwith;
-    }
-
-    public void setBandwith(String Bandwith) {
-        this.Bandwith = Bandwith;
-    }
-
-    public int getJumlahCCTV() {
-        return JumlahCCTV;
-    }
-
-    public void setJumlahCCTV(int JumlahCCTV) {
-        this.JumlahCCTV = JumlahCCTV;
-    }
-
-    public int getJumlah_AC() {
-        return JumlahAC;
-    }
-
-    public void setJumlah_AC(int Jumlah_AC) {
-        this.JumlahAC = Jumlah_AC;
-    }
-
-    public int getJumlahkabelLCD() {
-        return JumlahkabelLCD;
-    }
-
-    public void setJumlahkabelLCD(int JumlahkabelLCD) {
-        this.JumlahkabelLCD = JumlahkabelLCD;
-    }
-
-    public int getJumlahkipasangin() {
-        return Jumlahkipasangin;
-    }
-
-    public void setJumlahkipasangin(int Jumlahkipasangin) {
-        this.Jumlahkipasangin = Jumlahkipasangin;
-    }
-
-    public int getJumlahlampu() {
-        return Jumlahlampu;
-    }
-
-    public void setJumlahlampu(int Jumlahlampu) {
-        this.Jumlahlampu = Jumlahlampu;
-    }
-
     public int getJumlahsteker() {
         return Jumlahsteker;
     }
@@ -75,112 +42,327 @@ void test(){
         this.Jumlahsteker = Jumlahsteker;
     }
 
-    public int getKondisiAC() {
-        return KondisiAC;
+    public int getKondisisteker() {
+        return kondisisteker;
     }
 
-    public void setKondisiAC(int KondisiAC) {
-        this.KondisiAC = KondisiAC;
+    public void setKondisisteker(int kondisisteker) {
+        this.kondisisteker = kondisisteker;
     }
 
-    public int getKondisiCCTV() {
-        return KondisiCCTV;
+    public int getPosisisteker() {
+        return posisisteker;
     }
 
-    public void setKondisiCCTV(int KondisiCCTV) {
-        this.KondisiCCTV = KondisiCCTV;
+    public void setPosisisteker(int posisisteker) {
+        this.posisisteker = posisisteker;
     }
 
-    public String getKondisiLCD() {
-        return KondisiLCD;
+    public int getJumlahkabelLCD() {
+        return jumlahkabelLCD;
     }
 
-    public void setKondisiLCD(String KondisiLCD) {
-        this.KondisiLCD = KondisiLCD;
+    public void setJumlahkabelLCD(int jumlahkabelLCD) {
+        this.jumlahkabelLCD = jumlahkabelLCD;
     }
 
-    public int getKondisikipasangin() {
-        return Kondisikipasangin;
+    public int getKondisikabelLCD() {
+        return kondisikabelLCD;
     }
 
-    public void setKondisikipasangin(int Kondisikipasangin) {
-        this.Kondisikipasangin = Kondisikipasangin;
+    public void setKondisikabelLCD(int kondisikabelLCD) {
+        this.kondisikabelLCD = kondisikabelLCD;
+    }
+
+    public int getPosisikabelLCD() {
+        return posisikabelLCD;
+    }
+
+    public void setPosisikabelLCD(int posisikabelLCD) {
+        this.posisikabelLCD = posisikabelLCD;
+    }
+
+    public int getJumlahlampu() {
+        return jumlahlampu;
+    }
+
+    public void setJumlahlampu(int jumlahlampu) {
+        this.jumlahlampu = jumlahlampu;
     }
 
     public int getKondisilampu() {
-        return Kondisilampu;
+        return kondisilampu;
     }
 
-    public void setKondisilampu(int Kondisilampu) {
-        this.Kondisilampu = Kondisilampu;
+    public void setKondisilampu(int kondisilampu) {
+        this.kondisilampu = kondisilampu;
     }
 
-    public int getKondisisteker() {
-        return Kondisisteker;
+    public int getPosisilampu() {
+        return posisilampu;
     }
 
-    public void setKondisisteker(int Kondisisteker) {
-        this.Kondisisteker = Kondisisteker;
+    public void setPosisilampu(int posisilampu) {
+        this.posisilampu = posisilampu;
     }
 
-    public String getPosisi_AC() {
-        return PosisiAC;
+    public int getJumlahkipasangin() {
+        return jumlahkipasangin;
     }
 
-    public void setPosisi_AC(String Posisi_AC) {
-        this.PosisiAC = Posisi_AC;
+    public void setJumlahkipasangin(int jumlahkipasangin) {
+        this.jumlahkipasangin = jumlahkipasangin;
     }
 
-    public String getPosisi_CCTV() {
-        return PosisiCCTV;
+    public int getKondisikipasangin() {
+        return kondisikipasangin;
     }
 
-    public void setPosisi_CCTV(String Posisi_CCTV) {
-        this.PosisiCCTV = Posisi_CCTV;
+    public void setKondisikipasangin(int kondisikipasangin) {
+        this.kondisikipasangin = kondisikipasangin;
     }
 
-    public String getPosisikabelLCD() {
-        return PosisikabelLCD;
+    public int getPosisikipasangin() {
+        return posisikipasangin;
     }
 
-    public void setPosisikabelLCD(String PosisikabelLCD) {
-        this.PosisikabelLCD = PosisikabelLCD;
+    public void setPosisikipasangin(int posisikipasangin) {
+        this.posisikipasangin = posisikipasangin;
     }
 
-    public String getPosisikipasangin() {
-        return Posisikipasangin;
+    public int getJumlahAC() {
+        return jumlahAC;
     }
 
-    public void setPosisikipasangin(String Posisikipasangin) {
-        this.Posisikipasangin = Posisikipasangin;
+    public void setJumlahAC(int jumlahAC) {
+        this.jumlahAC = jumlahAC;
     }
 
-    public String getPosisilampu() {
-        return Posisilampu;
+    public int getKondisiAC() {
+        return kondisiAC;
     }
 
-    public void setPosisilampu(String Posisilampu) {
-        this.Posisilampu = Posisilampu;
+    public void setKondisiAC(int kondisiAC) {
+        this.kondisiAC = kondisiAC;
     }
 
-    public String getPosisisteker() {
-        return Posisisteker;
+    public int getPosisiAC() {
+        return posisiAC;
     }
 
-    public void setPosisisteker(String Posisisteker) {
-        this.Posisisteker = Posisisteker;
+    public void setPosisiAC(int posisiAC) {
+        this.posisiAC = posisiAC;
     }
 
-    public String getSSID() {
+    public int getSSID() {
         return SSID;
     }
 
-    public void setSSID(String SSID) {
+    public void setSSID(int SSID) {
         this.SSID = SSID;
     }
 
+    public int getBandwidth() {
+        return bandwidth;
+    }
 
+    public void setBandwidth(int bandwidth) {
+        this.bandwidth = bandwidth;
+    }
 
+    public int getJumlahCCTV() {
+        return jumlahCCTV;
+    }
 
+    public void setJumlahCCTV(int jumlahCCTV) {
+        this.jumlahCCTV = jumlahCCTV;
+    }
 
+    public int getKondisiCCTV() {
+        return kondisiCCTV;
+    }
+
+    public void setKondisiCCTV(int kondisiCCTV) {
+        this.kondisiCCTV = kondisiCCTV;
+    }
+
+    public int getPosisiCCTV() {
+        return posisiCCTV;
+    }
+
+    public void setPosisiCCTV(int posisiCCTV) {
+        this.posisiCCTV = posisiCCTV;
+    }
+    
+    String JumlahSteker (){
+        String pilih ;
+        if(getJumlahsteker()>=4){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String kondisiSteker (){
+        String pilih ;
+        if(getKondisisteker()==1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String posisiSteker (){
+        String pilih ;
+        if(getPosisisteker()>=1&&getPosisisteker()<=2){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String JumlahKabelLCD(){
+        String pilih;
+        if(getJumlahkabelLCD()>=1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String KondisiKabelLCD(){
+        String pilih;
+        if(getKondisikabelLCD()==1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String PosisiKabelLCD(){
+        String pilih;
+        if(getPosisikabelLCD()==2){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String JumlahLampu(){
+        String pilih;
+        if(getJumlahlampu()>=18){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String KondisiLampu(){
+        String pilih;
+        if(getKondisilampu()==1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String PosisiLampu(){
+        String pilih;
+        if(getPosisilampu()==3){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String JumlahKipasAngin(){
+        String pilih;
+        if(getJumlahkipasangin()>=2){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String KondisiKipasAngin(){
+        String pilih;
+        if(getKondisikipasangin()==1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String PosisiKipasAngin(){
+        String pilih;
+        if(getPosisikipasangin()==3){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String JumlahAC(){
+        String pilih;
+        if(getJumlahAC()>=1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String KondisiAC(){
+        String pilih;
+        if(getKondisiAC()==1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String PosisiAC(){
+        String pilih;
+        if(getPosisiAC()==1||getPosisiAC()==2){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String JumlahCCTV(){
+        String pilih;
+        if(getJumlahCCTV()==2){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String KondisiCCTV(){
+        String pilih;
+        if(getKondisiCCTV()==1){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String PosisiCCTV(){
+        String pilih;
+        if(getPosisiCCTV()==1||getPosisiCCTV()==3){
+            pilih="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String SSID(){
+        String pilih;
+        if(getSSID()==1){
+            pilih="sesuai";
+        }else{
+            pilih = "tidak sesuai";
+        }
+        return pilih;
+    }
 }
