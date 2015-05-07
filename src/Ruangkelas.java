@@ -17,6 +17,10 @@ public class Ruangkelas {
     private int Jumlah_meja;
     private int Jumlah_jendela;
     private int jumlah_pintu;
+    private String Username;
+    private String pasword;
+    String username2;
+    String pasword2;
 
     public String getNama_ruang() {
         return Nama_ruang;
@@ -89,6 +93,23 @@ public class Ruangkelas {
     public void setJumlah_pintu(int jumlah_pintu) {
         this.jumlah_pintu = jumlah_pintu;
     }
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    public String getPasword() {
+        return pasword;
+    }
+
+    public void setPasword(String pasword) {
+        this.pasword = pasword;
+    }
+    
     
     double luas (){        
         return getPanjang_ruang()*getLebar_ruang();
@@ -106,15 +127,42 @@ public class Ruangkelas {
     double rasio(){
         return luas()/getJumlah_kursi();        
     }
-    String analisis(){
+    String analisisPintuDanJendela(){
         String satu;
-                if(getJumlah_pintu() >=2||getJumlah_jendela()>1){
+                if(getJumlah_pintu() >=2&&getJumlah_jendela()>1){
                     satu="sesuai";
                 }
                 else{
                     satu="Tidak sesuai";
                 }
                 return satu;
+    }
+    String Analisis_rasio(){
+        String pilih;
+        if(rasio()>=0.5){
+            pilih="sesuai";
+        }else {
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String loginusername(){
+        String pilih;
+        if(username2.equals(getUsername())){
+            pilih ="benar";
+        }else{
+            pilih ="salah";
+        }
+        return pilih;
+    }
+    String loginpasword(){
+        String pilih;
+        if(pasword2.equals(getPasword())){
+            pilih ="benar";
+        }else{
+            pilih ="salah";
+        }
+        return pilih;
     }
 
 }
