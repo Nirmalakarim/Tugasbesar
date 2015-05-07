@@ -95,101 +95,49 @@ public class Lingkungan {
     }
     
   
-    void kebersihan (){
-        
-        System.out.println("A. Bagaimana keaadaan lantai");
-        System.out.println("1. bersih ");
-        System.out.println("2. tidak bersih");
-        System.out.print("Jawab : ");
-        setLantai(scan.nextInt());
-        switch(getLantai()){
-            case 1:
-                System.out.println("sesuai \n");        
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
+    String kebersihan (){
+       String pilih;
+        if(getDinding()==1 && getAtap()==1 && getLantai()==1 && getPintu()==1 && getJendela()==1){
+            pilih = "sesuai";
+        }else{
+            pilih = "tidak sesuai";
         }
-        
-        System.out.println("B. Bagaimana keaadaan dinding");
-        System.out.println("1. bersih");
-        System.out.println("2. tidak bersih");
-        System.out.print("Jawab : ");
-        setDinding(scan.nextInt());
-        switch(getDinding()){
-            case 1:
-                System.out.println("sesuai \n");        
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
-        }
-        
-        System.out.println("C. Bagaimana keaadaan atap");
-        System.out.println("1. bersih");
-        System.out.println("2. tidak bersih");
-        System.out.print("Jawab : ");
-        setAtap(scan.nextInt());
-        switch(getAtap()){
-            case 1:
-                System.out.println("sesuai \n");        
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
-        }
-        
-        System.out.println("D. Bagaimana keaadaan pintu");
-        System.out.println("1. bersih");
-        System.out.println("2. tidak bersih");
-        System.out.print("Jawab : ");
-        setPintu(scan.nextInt());
-        switch(getPintu()){
-            case 1:
-                System.out.println("sesuai \n");        
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
-        }
-        
-        System.out.println("E. Bagaimana keaadaan jendela");
-        System.out.println("1. bersih");
-        System.out.println("2. tidak bersih");
-        System.out.print("Jawab : ");
-        setJendela(scan.nextInt());
-        switch(getJendela()){
-            case 1:
-                System.out.println("sesuai \n");        
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
-        }
+        return pilih;
     }
-    void sirkualsi_udara (){    
-        switch(getSirkulasi_udara()){
-            case 1:
-                System.out.println("sesuai \n");        
-                break;
-            case 2:
-                System.out.println("tidak sesuai \n");
+    String sirkualsi_udara (){    
+        String pilih;
+        if(getSirkulasi_udara()==1){
+            pilih = "sesuai";
+        } else{
+            pilih = "tidak sesuai";
         }
+        return pilih;
     }
-    void pencayahan(){
+    String pencayahan(){
+        String pilih;
         if(getPencayahan()>=250 && getPencayahan()<=350){
-            System.out.println("sesuai \n");
+            pilih="sesuai";
         } else{
-            System.out.println("tidak sesuai \n");
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
-    void kelembapan(){
+    String kelembapan(){
+        String pilih;
         if (getKelembapan()>=70 && getKelembapan()<=80){
-            System.out.println("sesuai \n");
+            pilih="sesuai";
         } else{
-            System.out.println("tidak sesuai \n");
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
-    void suhu(){
+    String suhu(){
+        String pilih;
         if (getSuhu()>=25 && getSuhu()<=35){
-            System.out.println("sesuai \n");
+            pilih="sesuai";
         }else {
-            System.out.println("tidak sesuai \n");
+            pilih="tidak sesuai";
         }
+        return pilih;
     }
 }
