@@ -1,7 +1,7 @@
 public class Deklarasi_Fasilitas extends Fasilitas{
    void analisa_sarana(){
         Ruangkelas x = new Ruangkelas();
-        x.setUsername("201410370311015");
+        x.setUsername("tugasbesar");
         x.setPasword("12345");
         System.out.println("Tahap Jumlah, Kondisi, Posisi Sarana \n");
         System.out.println("A. Berapa Jumlah Steker");
