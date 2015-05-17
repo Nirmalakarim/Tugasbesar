@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -7,79 +10,78 @@
  *
  * @author NirmalaKarim
  */
-public class Deklarasi_Kenyamanan extends Kenyamanan{
-    void deklarasi_kenyamanan(){
-               
-        System.out.println("Tahap Kenyamanan Ruang Kelas \n");
+public class Deklarasi_Kenyamanan{
+    Scanner scan = new Scanner(System.in);
+    void deklarasi(){
+        deklarasi_kenyamanan(new Kenyamanan("Tahap Kondisi Kenyamanan"));
+        deklarasi_keamanan(new Kenyamanan("Tahap Kondisi Keamanan"));      
+    }
+    public void deklarasi_kenyamanan(Kenyamanan test) {
+        test.setKondisiKenyamanan(2, 2, 2, 2, 2);
+        System.out.println(test.kondisi);
         System.out.println("A. Apakah di kelas bising");
         System.out.println("1. Bising");
         System.out.println("2. Tidak Bising");
         System.out.print("Jawab : ");
-        super.setKebisingan(scan.nextInt());
-        System.out.println("Kebisingan :"+kebisingan());
+        test.setPilih_kebisingan(scan.nextInt());
+        System.out.println("Kebisingan :"+test.kebisingan());
         
         System.out.println("B. Apakah di kelas bau");
         System.out.println("1. Bau");
         System.out.println("2. Tidak Bau");
         System.out.print("Jawab : ");
-        super.setBau(scan.nextInt());
-        System.out.println("Bau :"+bau());
+        test.setPilih_bau(scan.nextInt());
+        System.out.println("Bau :"+test.bau());
                
         System.out.println("C. Apakah di kelas ada yang bocor");
         System.out.println("1. Ada ");
         System.out.println("2. Tidak Ada");
         System.out.print("Jawab : ");
-        super.setKebocoran(scan.nextInt());
-        System.out.println("Kebocoran :"+kebocoran());
+        test.setPilih_kebocoran(scan.nextInt());
+        System.out.println("Kebocoran :"+test.kebocoran());
         
         System.out.println("D. Apakah di kelas ada aus");
         System.out.println("1. Ada ");
         System.out.println("2. Tidak Ada");
         System.out.print("Jawab : ");
-        super.setKeausan(scan.nextInt());
-        System.out.println("Keausan :"+keausan());
+        test.setPilih_keausan(scan.nextInt());
+        System.out.println("Keausan :"+test.keausan());
         
         System.out.println("E. Apakah di kelas ada yang rusak");
         System.out.println("1. Ada ");
         System.out.println("2. Tidak Ada ");
         System.out.print("Jawab : ");
-        super.setKerusakan(scan.nextInt());
-        System.out.println("Kerusakan :"+kerusakan());
-        
+        test.setPilih_kerusakan(scan.nextInt());
+        System.out.println("Kerusakan :"+test.kerusakan());
     }
-    void deklarasi_keamanan(){
-        System.out.println("\nTahap Keamanan Ruang kelas \n");
+    public void deklarasi_keamanan(Kenyamanan test) {
+        test.setKondisiKenyamanan(1, 1, 1, 1);
+        System.out.println(test.kondisi);
         System.out.println("A. Apakah kelas masih kokoh");
         System.out.println("1. Masih Kokoh");
         System.out.println("2. Tidak Kokoh");
         System.out.print("Jawab : ");
-        super.setKekokohan(scan.nextInt());
-        System.out.println("Kekokohan :"+kekokohan());
+        test.setPilih_kekokohan(scan.nextInt());
+        System.out.println("Kekokohan :"+test.kekokohan());
         
         System.out.println("B. Bagaimana keaadaan kunci pintu");
         System.out.println("1. Ada");
         System.out.println("2. Tidak ada");
         System.out.print("Jawab : ");
-        super.setKunci_pintu(scan.nextInt());
+        test.setPilih_kuncipintu(scan.nextInt());
         
         System.out.println("C. Bagaimana keaadaan kunci jendela");
         System.out.println("1. Ada");
         System.out.println("2. Tidak ada");
         System.out.print("Jawab : ");
-        super.setKunci_jendela(scan.nextInt());
-        System.out.println("Analisis kunci pintu dan jendela :"+kunci());
+        test.setPilih_kuncijendela(scan.nextInt());
+        System.out.println("Analisis kunci pintu dan jendela :"+test.kunci());
         
         System.out.println("D. Apakah di kelas ada Bahaya");
         System.out.println("1. Aman");
         System.out.println("2. Tidak Aman");
         System.out.print("Jawab : ");
-        super.setBahaya(scan.nextInt());
-        System.out.println("Keamanan :"+keamanan());
+        test.setPilih_bahaya(scan.nextInt());
+        System.out.println("Keamanan :"+test.keamanan());
     }
-    public static void main(String[] args) {
-        Deklarasi_Kenyamanan n =  new Deklarasi_Kenyamanan();
-        n.deklarasi_kenyamanan();
-        n.deklarasi_keamanan();
-    }
-    
 }
