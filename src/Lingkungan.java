@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -10,66 +8,77 @@ import java.util.Scanner;
  *
  * @author NirmalaKarim
  */
-public class Lingkungan {
-    Scanner scan = new Scanner(System.in);
-    private int lantai;
-    private int dinding;
-    private int atap;
-    private int pintu;
-    private int jendela;
-    private int sirkulasi_udara;
-    private int pencayahan;
-    private int kelembapan;
-    private int suhu;
+public class Lingkungan extends Ruangkelas{
+    int pilih_atap;
+    int pilih_dinding;
+    int pilih_jendela;
+    int pilih_pintu;
+    int pilih_lantai;
+    int pilih_sirkulasi;
 
-    public int getLantai() {
-        return lantai;
+    public Lingkungan(String kondisi) {
+        super(kondisi);
+    }
+    @Override//override
+    public void setKondisiLingkungan(int lantai, int dinding, int atap, int pintu, int jendela) {
+        super.setKondisiLingkungan(lantai, dinding, atap, pintu, jendela);
     }
 
-    public void setLantai(int lantai) {
-        this.lantai = lantai;
+    @Override//override
+    public void setKondisiLingkungan(int sirkulasi_udara) {
+        super.setKondisiLingkungan(sirkulasi_udara);
+    }
+    
+    
+    //enkapsulasi
+    public int getPilih_atap() {
+        return pilih_atap;
     }
 
-    public int getDinding() {
-        return dinding;
+    public void setPilih_atap(int pilih_atap) {
+        this.pilih_atap = pilih_atap;
     }
 
-    public void setDinding(int dinding) {
-        this.dinding = dinding;
+    public int getPilih_dinding() {
+        return pilih_dinding;
     }
 
-    public int getAtap() {
-        return atap;
+    public void setPilih_dinding(int pilih_dinding) {
+        this.pilih_dinding = pilih_dinding;
     }
 
-    public void setAtap(int atap) {
-        this.atap = atap;
+    public int getPilih_jendela() {
+        return pilih_jendela;
     }
 
-    public int getPintu() {
-        return pintu;
+    public void setPilih_jendela(int pilih_jendela) {
+        this.pilih_jendela = pilih_jendela;
     }
 
-    public void setPintu(int pintu) {
-        this.pintu = pintu;
+    public int getPilih_pintu() {
+        return pilih_pintu;
     }
 
-    public int getJendela() {
-        return jendela;
+    public void setPilih_pintu(int pilih_pintu) {
+        this.pilih_pintu = pilih_pintu;
     }
 
-    public void setJendela(int jendela) {
-        this.jendela = jendela;
+    public int getPilih_lantai() {
+        return pilih_lantai;
     }
 
-    public int getSirkulasi_udara() {
-        return sirkulasi_udara;
+    public void setPilih_lantai(int pilih_lantai) {
+        this.pilih_lantai = pilih_lantai;
     }
 
-    public void setSirkulasi_udara(int sirkulasi_udara) {
-        this.sirkulasi_udara = sirkulasi_udara;
+    public int getPilih_sirkulasi() {
+        return pilih_sirkulasi;
     }
 
+    public void setPilih_sirkulasi(int pilih_sirkulasi) {
+        this.pilih_sirkulasi = pilih_sirkulasi;
+    }
+    
     public int getPencayahan() {
         return pencayahan;
     }
@@ -94,19 +103,55 @@ public class Lingkungan {
         this.suhu = suhu;
     }
     
-  
-    String kebersihan (){
-       String pilih;
-        if(getDinding()==1 && getAtap()==1 && getLantai()==1 && getPintu()==1 && getJendela()==1){
+    //untuk mengembalikan nilai
+    String kebersihan_atap(){
+        String pilih;
+        if(getPilih_atap()==atap){
             pilih = "sesuai";
         }else{
             pilih = "tidak sesuai";
         }
         return pilih;
     }
-    String sirkualsi_udara (){    
+    String kebersihan_dinding(){
         String pilih;
-        if(getSirkulasi_udara()==1){
+        if(getPilih_dinding()==dinding){
+            pilih = "sesuai";
+        }else{
+            pilih = "tidak sesuai";
+        }
+        return pilih;
+    }
+    String kebersihan_jendela(){
+        String pilih;
+        if(getPilih_jendela()==jendela){
+            pilih = "sesuai";
+        }else{
+            pilih = "tidak sesuai";
+        }
+        return pilih;
+    }
+    String kebersihan_lantai(){
+        String pilih;
+        if(getPilih_lantai()==lantai){
+            pilih = "sesuai";
+        }else{
+            pilih = "tidak sesuai";
+        }
+        return pilih;
+    }
+    String kebersihan_pintu(){
+        String pilih;
+        if(getPilih_pintu()==pintu){
+            pilih = "sesuai";
+        }else{
+            pilih = "tidak sesuai";
+        }
+        return pilih;
+    }
+    String sirkulasi_udara(){
+        String pilih;
+        if(getPilih_sirkulasi()==sirkulasi_udara){
             pilih = "sesuai";
         } else{
             pilih = "tidak sesuai";
@@ -116,26 +161,26 @@ public class Lingkungan {
     String pencayahan(){
         String pilih;
         if(getPencayahan()>=250 && getPencayahan()<=350){
-            pilih="sesuai";
-        } else{
-            pilih="tidak sesuai";
+            pilih = "sesuai";
+        }else{
+            pilih = "tidak sesuai";
         }
         return pilih;
     }
     String kelembapan(){
         String pilih;
-        if (getKelembapan()>=70 && getKelembapan()<=80){
+        if(getKelembapan()>=70 && getKelembapan()<=80){
             pilih="sesuai";
-        } else{
+        }else{
             pilih="tidak sesuai";
         }
         return pilih;
     }
     String suhu(){
         String pilih;
-        if (getSuhu()>=25 && getSuhu()<=35){
-            pilih="sesuai";
-        }else {
+        if(getSuhu()>=25 && getSuhu()<=35){
+            pilih = "sesuai";
+        }else{
             pilih="tidak sesuai";
         }
         return pilih;
