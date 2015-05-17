@@ -1,6 +1,3 @@
-
-import java.util.Scanner;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -10,148 +7,136 @@ import java.util.Scanner;
  *
  * @author Dini Saputri Y
  */
-public class Fasilitas {
-     
-Scanner scan = new Scanner(System.in);
-    private int Jumlahsteker;
-    private int kondisisteker;
-    private int posisisteker;
-    private int jumlahkabelLCD;
-    private int kondisikabelLCD;
-    private int posisikabelLCD;
-    private int jumlahlampu;
-    private int kondisilampu;
-    private int posisilampu;
-    private int jumlahkipasangin;
-    private int kondisikipasangin;
-    private int posisikipasangin;
-    private int jumlahAC;
-    private int kondisiAC;
-    private int posisiAC;
-    private int SSID;
-    private int bandwidth;
-    private int jumlahCCTV;
-    private int kondisiCCTV;
-    private int posisiCCTV; 
- 
-    public int getJumlahsteker() {
-        return Jumlahsteker;
+public class Fasilitas extends Ruangkelas{
+    int pilih_kondisisteker;
+    int pilih_kondisilampu;
+    int pilih_kondisikabel;
+    int pilih_kondisikipas;
+    int pilih_kondisiac;
+    int pilih_kondisicctv;
+    int pilih_posisikabel;
+    int pilih_posisilampu;
+    int pilih_posisikipas;
+    int pilih_posisiac;
+    String pilih_username;
+    String pilih_pasword;
+
+    public Fasilitas(String kondisi) {
+        super(kondisi);
+    }
+     @Override
+    public String getUsername() {
+        return super.getUsername();
     }
 
-    public void setJumlahsteker(int Jumlahsteker) {
-        this.Jumlahsteker = Jumlahsteker;
+    @Override
+    public void setUsername(String Username) {
+        super.setUsername(Username);
     }
 
-    public int getKondisisteker() {
-        return kondisisteker;
+    @Override
+    public String getPasword() {
+        return super.getPasword();
     }
 
-    public void setKondisisteker(int kondisisteker) {
-        this.kondisisteker = kondisisteker;
+    @Override
+    public void setPasword(String pasword) {
+        super.setPasword(pasword);
     }
 
-    public int getPosisisteker() {
-        return posisisteker;
+    @Override
+    public void setFasilitas(String username, String pasword) {
+        super.setFasilitas(username, pasword);
+    }
+    
+    @Override
+    public void setFasilitas(int kondisisteker, int kondisikabelLCD, int kondisilampu, int kondisikipasangin, int kondisiAC, int kondisiCCTV) {
+        super.setFasilitas(kondisisteker, kondisikabelLCD, kondisilampu, kondisikipasangin, kondisiAC, kondisiCCTV);
     }
 
-    public void setPosisisteker(int posisisteker) {
-        this.posisisteker = posisisteker;
+    @Override
+    public void setFasilitas(int posisikabelLCD, int posisilampu, int posisikipasangin, int posisiAC) {
+        super.setFasilitas(posisikabelLCD, posisilampu, posisikipasangin, posisiAC);
     }
 
-    public int getJumlahkabelLCD() {
-        return jumlahkabelLCD;
+    public int getPilih_kondisisteker() {
+        return pilih_kondisisteker;
     }
 
-    public void setJumlahkabelLCD(int jumlahkabelLCD) {
-        this.jumlahkabelLCD = jumlahkabelLCD;
+    public void setPilih_kondisisteker(int pilih_kondisisteker) {
+        this.pilih_kondisisteker = pilih_kondisisteker;
     }
 
-    public int getKondisikabelLCD() {
-        return kondisikabelLCD;
+    public int getPilih_kondisilampu() {
+        return pilih_kondisilampu;
     }
 
-    public void setKondisikabelLCD(int kondisikabelLCD) {
-        this.kondisikabelLCD = kondisikabelLCD;
+    public void setPilih_kondisilampu(int pilih_kondisilampu) {
+        this.pilih_kondisilampu = pilih_kondisilampu;
     }
 
-    public int getPosisikabelLCD() {
-        return posisikabelLCD;
+    public int getPilih_kondisikabel() {
+        return pilih_kondisikabel;
     }
 
-    public void setPosisikabelLCD(int posisikabelLCD) {
-        this.posisikabelLCD = posisikabelLCD;
+    public void setPilih_kondisikabel(int pilih_kondisikabel) {
+        this.pilih_kondisikabel = pilih_kondisikabel;
     }
 
-    public int getJumlahlampu() {
-        return jumlahlampu;
+    public int getPilih_kondisikipas() {
+        return pilih_kondisikipas;
     }
 
-    public void setJumlahlampu(int jumlahlampu) {
-        this.jumlahlampu = jumlahlampu;
+    public void setPilih_kondisikipas(int pilih_kondisikipas) {
+        this.pilih_kondisikipas = pilih_kondisikipas;
     }
 
-    public int getKondisilampu() {
-        return kondisilampu;
+    public int getPilih_kondisiac() {
+        return pilih_kondisiac;
     }
 
-    public void setKondisilampu(int kondisilampu) {
-        this.kondisilampu = kondisilampu;
+    public void setPilih_kondisiac(int pilih_kondisiac) {
+        this.pilih_kondisiac = pilih_kondisiac;
     }
 
-    public int getPosisilampu() {
-        return posisilampu;
+    public int getPilih_kondisicctv() {
+        return pilih_kondisicctv;
     }
 
-    public void setPosisilampu(int posisilampu) {
-        this.posisilampu = posisilampu;
+    public void setPilih_kondisicctv(int pilih_kondisicctv) {
+        this.pilih_kondisicctv = pilih_kondisicctv;
     }
 
-    public int getJumlahkipasangin() {
-        return jumlahkipasangin;
+    public int getPilih_posisikabel() {
+        return pilih_posisikabel;
     }
 
-    public void setJumlahkipasangin(int jumlahkipasangin) {
-        this.jumlahkipasangin = jumlahkipasangin;
+    public void setPilih_posisikabel(int pilih_posisikabel) {
+        this.pilih_posisikabel = pilih_posisikabel;
     }
 
-    public int getKondisikipasangin() {
-        return kondisikipasangin;
+    public int getPilih_posisilampu() {
+        return pilih_posisilampu;
     }
 
-    public void setKondisikipasangin(int kondisikipasangin) {
-        this.kondisikipasangin = kondisikipasangin;
+    public void setPilih_posisilampu(int pilih_posisilampu) {
+        this.pilih_posisilampu = pilih_posisilampu;
     }
 
-    public int getPosisikipasangin() {
-        return posisikipasangin;
+    public int getPilih_posisikipas() {
+        return pilih_posisikipas;
     }
 
-    public void setPosisikipasangin(int posisikipasangin) {
-        this.posisikipasangin = posisikipasangin;
+    public void setPilih_posisikipas(int pilih_posisikipas) {
+        this.pilih_posisikipas = pilih_posisikipas;
     }
 
-    public int getJumlahAC() {
-        return jumlahAC;
+    public int getPilih_posisiac() {
+        return pilih_posisiac;
     }
 
-    public void setJumlahAC(int jumlahAC) {
-        this.jumlahAC = jumlahAC;
-    }
-
-    public int getKondisiAC() {
-        return kondisiAC;
-    }
-
-    public void setKondisiAC(int kondisiAC) {
-        this.kondisiAC = kondisiAC;
-    }
-
-    public int getPosisiAC() {
-        return posisiAC;
-    }
-
-    public void setPosisiAC(int posisiAC) {
-        this.posisiAC = posisiAC;
+    public void setPilih_posisiac(int pilih_posisiac) {
+        this.pilih_posisiac = pilih_posisiac;
     }
 
     public int getSSID() {
@@ -162,12 +147,44 @@ Scanner scan = new Scanner(System.in);
         this.SSID = SSID;
     }
 
-    public int getBandwidth() {
-        return bandwidth;
+    public int getJumlahsteker() {
+        return Jumlahsteker;
     }
 
-    public void setBandwidth(int bandwidth) {
-        this.bandwidth = bandwidth;
+    public void setJumlahsteker(int Jumlahsteker) {
+        this.Jumlahsteker = Jumlahsteker;
+    }
+
+    public int getJumlahkabelLCD() {
+        return jumlahkabelLCD;
+    }
+
+    public void setJumlahkabelLCD(int jumlahkabelLCD) {
+        this.jumlahkabelLCD = jumlahkabelLCD;
+    }
+
+    public int getJumlahlampu() {
+        return jumlahlampu;
+    }
+
+    public void setJumlahlampu(int jumlahlampu) {
+        this.jumlahlampu = jumlahlampu;
+    }
+
+    public int getJumlahkipasangin() {
+        return jumlahkipasangin;
+    }
+
+    public void setJumlahkipasangin(int jumlahkipasangin) {
+        this.jumlahkipasangin = jumlahkipasangin;
+    }
+
+    public int getJumlahAC() {
+        return jumlahAC;
+    }
+
+    public void setJumlahAC(int jumlahAC) {
+        this.jumlahAC = jumlahAC;
     }
 
     public int getJumlahCCTV() {
@@ -178,12 +195,12 @@ Scanner scan = new Scanner(System.in);
         this.jumlahCCTV = jumlahCCTV;
     }
 
-    public int getKondisiCCTV() {
-        return kondisiCCTV;
+    public int getPosisisteker() {
+        return posisisteker;
     }
 
-    public void setKondisiCCTV(int kondisiCCTV) {
-        this.kondisiCCTV = kondisiCCTV;
+    public void setPosisisteker(int posisisteker) {
+        this.posisisteker = posisisteker;
     }
 
     public int getPosisiCCTV() {
@@ -205,7 +222,7 @@ Scanner scan = new Scanner(System.in);
     }
     String kondisiSteker (){
         String pilih ;
-        if(getKondisisteker()==1){
+        if(getPilih_kondisisteker()==kondisisteker){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -232,7 +249,7 @@ Scanner scan = new Scanner(System.in);
     }
     String KondisiKabelLCD(){
         String pilih;
-        if(getKondisikabelLCD()==1){
+        if(getPilih_kondisikabel()==kondisikabelLCD){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -241,7 +258,7 @@ Scanner scan = new Scanner(System.in);
     }
     String PosisiKabelLCD(){
         String pilih;
-        if(getPosisikabelLCD()==2){
+        if(getPilih_posisikabel()==posisikabelLCD){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -259,7 +276,7 @@ Scanner scan = new Scanner(System.in);
     }
     String KondisiLampu(){
         String pilih;
-        if(getKondisilampu()==1){
+        if(getPilih_kondisilampu()==kondisilampu){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -268,7 +285,7 @@ Scanner scan = new Scanner(System.in);
     }
     String PosisiLampu(){
         String pilih;
-        if(getPosisilampu()==3){
+        if(getPilih_posisilampu()==posisilampu){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -286,7 +303,7 @@ Scanner scan = new Scanner(System.in);
     }
     String KondisiKipasAngin(){
         String pilih;
-        if(getKondisikipasangin()==1){
+        if(getPilih_kondisikipas()==kondisikipasangin){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -295,7 +312,7 @@ Scanner scan = new Scanner(System.in);
     }
     String PosisiKipasAngin(){
         String pilih;
-        if(getPosisikipasangin()==3){
+        if(getPilih_posisikipas()==posisikipasangin){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -313,7 +330,7 @@ Scanner scan = new Scanner(System.in);
     }
     String KondisiAC(){
         String pilih;
-        if(getKondisiAC()==1){
+        if(getPilih_kondisiac()==kondisiAC){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -322,7 +339,7 @@ Scanner scan = new Scanner(System.in);
     }
     String PosisiAC(){
         String pilih;
-        if(getPosisiAC()==1||getPosisiAC()==2){
+        if(getPilih_posisiac()== posisiAC){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -340,7 +357,7 @@ Scanner scan = new Scanner(System.in);
     }
     String KondisiCCTV(){
         String pilih;
-        if(getKondisiCCTV()==1){
+        if(getPilih_kondisicctv()==kondisiCCTV){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -362,6 +379,25 @@ Scanner scan = new Scanner(System.in);
             pilih="sesuai";
         }else{
             pilih = "tidak sesuai";
+        }
+        return pilih;
+    }
+    String loginusername(){
+        String pilih;
+        if(pilih_username.equals(getUsername())){
+            pilih ="sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String loginpasword(){
+        String pilih;
+        if (pilih_pasword.equals(getPasword())){
+            pilih="sesuai";
+        }else{
+            pilih ="tidak sesuai";
+            
         }
         return pilih;
     }
