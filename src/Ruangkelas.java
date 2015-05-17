@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -8,92 +11,62 @@
  * @author NirmalaKarim
  */
 public class Ruangkelas {
-     private String Nama_ruang;
-    private String Lokasi_ruang;
-    private String Prodi;
-    private int Panjang_ruang;
-    private int Lebar_ruang;
-    private int Jumlah_kursi;
-    private int Jumlah_meja;
-    private int Jumlah_jendela;
-    private int jumlah_pintu;
-    private String Username;
-    private String pasword;
-    String username2;
-    String pasword2;
+    Scanner scan = new Scanner(System.in);
+    String Nama_ruang;
+    String Lokasi_ruang;
+    String Prodi;
+    int Panjang_ruang;
+    int Lebar_ruang;
+    int Jumlah_kursi;
+    int Jumlah_meja;
+    int Jumlah_jendela;
+    int jumlah_pintu;
+    String Username;
+    String pasword;
+    int Jumlahsteker;
+    int kondisisteker;
+    int posisisteker;
+    int jumlahkabelLCD;
+    int kondisikabelLCD;
+    int posisikabelLCD;
+    int jumlahlampu;
+    int kondisilampu;
+    int posisilampu;
+    int jumlahkipasangin;
+    int kondisikipasangin;
+    int posisikipasangin;
+    int jumlahAC;
+    int kondisiAC;
+    int posisiAC;
+    int SSID;
+    int bandwidth;
+    int jumlahCCTV;
+    int kondisiCCTV;
+    int posisiCCTV;
+    int kebisingan;
+    int bau;
+    int kebocoran;
+    int keausan;
+    int kerusakan;
+    int kekokohan;
+    int kunci_pintu;
+    int kunci_jendela;
+    int bahaya;
+    int lantai;
+    int dinding;
+    int atap;
+    int pintu;
+    int jendela;
+    int sirkulasi_udara;
+    int pencayahan;
+    int kelembapan;
+    int suhu;
+    String kondisi;
 
-    public String getNama_ruang() {
-        return Nama_ruang;
+    public Ruangkelas(String kondisi) {
+        this.kondisi = kondisi;
     }
-
-    public void setNama_ruang(String Nama_ruang) {
-        this.Nama_ruang = Nama_ruang;
-    }
-
-    public String getLokasi_ruang() {
-        return Lokasi_ruang;
-    }
-
-    public void setLokasi_ruang(String Lokasi_ruang) {
-        this.Lokasi_ruang = Lokasi_ruang;
-    }
-
-    public String getProdi() {
-        return Prodi;
-    }
-
-    public void setProdi(String Prodi) {
-        this.Prodi = Prodi;
-    }
-
-    public int getPanjang_ruang() {
-        return Panjang_ruang;
-    }
-
-    public void setPanjang_ruang(int Panjang_ruang) {
-        this.Panjang_ruang = Panjang_ruang;
-    }
-
-    public int getLebar_ruang() {
-        return Lebar_ruang;
-    }
-
-    public void setLebar_ruang(int Lebar_ruang) {
-        this.Lebar_ruang = Lebar_ruang;
-    }
-
-    public int getJumlah_kursi() {
-        return Jumlah_kursi;
-    }
-
-    public void setJumlah_kursi(int Jumlah_kursi) {
-        this.Jumlah_kursi = Jumlah_kursi;
-    }
-
-    public int getJumlah_meja() {
-        return Jumlah_meja;
-    }
-
-    public void setJumlah_meja(int Jumlah_meja) {
-        this.Jumlah_meja = Jumlah_meja;
-    }
-
-    public int getJumlah_jendela() {
-        return Jumlah_jendela;
-    }
-
-    public void setJumlah_jendela(int Jumlah_jendela) {
-        this.Jumlah_jendela = Jumlah_jendela;
-    }
-
-    public int getJumlah_pintu() {
-        return jumlah_pintu;
-    }
-
-    public void setJumlah_pintu(int jumlah_pintu) {
-        this.jumlah_pintu = jumlah_pintu;
-    }
-
+    
     public String getUsername() {
         return Username;
     }
@@ -110,59 +83,43 @@ public class Ruangkelas {
         this.pasword = pasword;
     }
     
-    
-    double luas (){        
-        return getPanjang_ruang()*getLebar_ruang();
+    public void setFasilitas (int kondisisteker, int kondisikabelLCD, int kondisilampu, int kondisikipasangin, int kondisiAC, int kondisiCCTV){
+        this.kondisisteker=kondisisteker;
+        this.kondisikabelLCD=kondisikabelLCD;
+        this.kondisilampu= kondisilampu;
+        this.kondisikipasangin=kondisikipasangin;
+        this.kondisiAC=kondisiAC;
+        this.kondisiCCTV=kondisiCCTV;
     }
-    String bentuk(){
-        String pilih;
-        if(getPanjang_ruang()!=luas()){
-            pilih="persegi panjang dan sesuai";
-        } else{
-            pilih="bukan persegi panjang";
-        }
-        return pilih;
+    public void setFasilitas (int posisikabelLCD, int posisilampu, int posisikipasangin, int posisiAC){
+        this.posisikabelLCD=posisikabelLCD;
+        this.posisilampu=posisilampu;
+        this.posisikipasangin=posisikipasangin;
+        this.posisiAC=posisiAC;
     }
-    
-    double rasio(){
-        return luas()/getJumlah_kursi();        
+    public void setFasilitas(String username, String pasword){
+        this.Username=username;
+        this.pasword=pasword;
     }
-    String analisisPintuDanJendela(){
-        String satu;
-                if(getJumlah_pintu() >=2&&getJumlah_jendela()>1){
-                    satu="sesuai";
-                }
-                else{
-                    satu="Tidak sesuai";
-                }
-                return satu;
+    public void setKondisiLingkungan(int lantai, int dinding, int atap, int pintu, int jendela){//overloading
+        this.atap=atap;
+        this.dinding=dinding;
+        this.lantai=lantai;
     }
-    String Analisis_rasio(){
-        String pilih;
-        if(rasio()>=0.5){
-            pilih="sesuai";
-        }else {
-            pilih="tidak sesuai";
-        }
-        return pilih;
+    public void setKondisiLingkungan(int sirkulasi_udara){
+        this.sirkulasi_udara=sirkulasi_udara;
     }
-    String loginusername(){
-        String pilih;
-        if(username2.equals(getUsername())){
-            pilih ="benar";
-        }else{
-            pilih ="salah";
-        }
-        return pilih;
+    public void setKondisiKenyamanan(int kebisingan, int bau, int kebocoran, int kerusakan, int keausan){
+        this.kebisingan=kebisingan;
+        this.bau=bau;
+        this.kebocoran=kebocoran;
+        this.kerusakan=kerusakan;
+        this.keausan=keausan;
     }
-    String loginpasword(){
-        String pilih;
-        if(pasword2.equals(getPasword())){
-            pilih ="benar";
-        }else{
-            pilih ="salah";
-        }
-        return pilih;
+    public void setKondisiKenyamanan(int kekokohan, int kunci_pintu, int kunci_jendela, int bahaya){
+        this.kekokohan=kekokohan;
+        this.kunci_pintu=kunci_pintu;
+        this.kunci_jendela=kunci_jendela;
+        this.bahaya=bahaya;
     }
-
 }
