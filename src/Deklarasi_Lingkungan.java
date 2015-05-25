@@ -24,7 +24,7 @@ public class Deklarasi_Lingkungan {
         test.setPilih_bau(scan.nextInt());
         System.out.println("Bau :"+test.bau());
                
-        System.out.println("C. Apakah di kelas ada yang bocor");
+        System.out.println("C. Apakah di kelas ada yang bocor"); 
         System.out.println("1. Ada ");
         System.out.println("2. Tidak Ada");
         System.out.print("Jawab : ");
