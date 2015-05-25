@@ -8,12 +8,10 @@
  * @author NirmalaKarim
  */
 public class Identitas_kondisi extends Ruangkelas{
-
     public Identitas_kondisi(String kondisi) {
         super(kondisi);
     }
-    
-    
+
     @Override
     public String getPasword() {
         return super.getPasword();
@@ -90,6 +88,47 @@ public class Identitas_kondisi extends Ruangkelas{
         this.jumlah_pintu = jumlah_pintu;
     }
 
+    @Override
+    void deklarasi1() {
+        System.out.println(kondisi);
+        System.out.print("Masukan nama ruang :");
+        setNama_ruang(scan.next());
+        System.out.print("Masukan lokasi ruang :");
+        setLokasi_ruang(scan.next());
+        System.out.print("Masukan Jurusan anda :");
+        setProdi(scan.next());
+        
+        System.out.println("================== \n");
+        System.out.println("Nama ruang : "+getNama_ruang());
+        System.out.println("Lokasi Ruang : "+getLokasi_ruang());
+        System.out.println("Jurusan : "+getProdi());
+    }
+
+    @Override
+    public void deklarasi2() {
+        System.out.println(kondisi);
+        System.out.println("A. Masukan panjang ruang ");
+        System.out.print("Jawab :");
+        setPanjang_ruang(scan.nextInt());
+        System.out.println("B. Masukan lebar ruang ");
+        System.out.print("Jawab :");
+        setLebar_ruang(scan.nextInt());
+        System.out.println("C. Luas : "+luas());
+        System.out.println("D. Bentuk : "+bentuk());
+        System.out.println("E. Masukan jumlah kursi");
+        System.out.print("Jawab :");
+        setJumlah_kursi(scan.nextInt());
+        System.out.println("F. Rasio : "+rasio());
+        System.out.println("Rasio : "+Analisis_rasio());
+        System.out.println("G. Masukan jumlah pintu ");
+        System.out.print("Jawab :");
+        setJumlah_pintu(scan.nextInt());
+        System.out.println("H. Masukan jumlah jendela");
+        System.out.print("Jawab : ");
+        setJumlah_jendela(scan.nextInt());
+        System.out.println("Jumlah pintu dan jendela :"+analisisPintuDanJendela());
+    }
+
     
     
     double luas (){        
@@ -127,5 +166,4 @@ public class Identitas_kondisi extends Ruangkelas{
         }
         return pilih;
     }
-    
 }

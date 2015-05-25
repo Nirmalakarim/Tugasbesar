@@ -3,22 +3,21 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author NirmalaKarim
  */
-public class Lingkungan extends Ruangkelas{
+public class Lingkungan extends Ruangkelas implements deklarasi{
     int pilih_atap;
     int pilih_dinding;
     int pilih_jendela;
     int pilih_pintu;
     int pilih_lantai;
     int pilih_sirkulasi;
-
-    public Lingkungan(String kondisi) {
+    public Lingkungan(String kondisi) {//konstraktor
         super(kondisi);
     }
+    
     @Override//override
     public void setKondisiLingkungan(int lantai, int dinding, int atap, int pintu, int jendela) {
         super.setKondisiLingkungan(lantai, dinding, atap, pintu, jendela);
@@ -103,61 +102,118 @@ public class Lingkungan extends Ruangkelas{
         this.suhu = suhu;
     }
     
-    //untuk mengembalikan nilai
-    String kebersihan_atap(){
-        String pilih;
-        if(getPilih_atap()==atap){
-            pilih = "sesuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    void deklarasi1() {
+        setKondisiLingkungan(1, 1, 1, 1, 1);
+        System.out.println(kondisi);
+        System.out.println("A. Bagaimana keaadaan lantai");
+        System.out.println("1. bersih ");
+        System.out.println("2. tidak bersih");
+        System.out.print("Jawab : ");
+        setPilih_lantai(scan.nextInt());
+        System.out.println("Kondisi lantai :"+string1());
+        
+        System.out.println("B. Bagaimana keaadaan dinding");
+        System.out.println("1. bersih");
+        System.out.println("2. tidak bersih");
+        System.out.print("Jawab : ");
+        setPilih_dinding(scan.nextInt());
+        System.out.println("Kondisi dinding :"+string2());
+                
+        System.out.println("C. Bagaimana keaadaan atap");
+        System.out.println("1. bersih");
+        System.out.println("2. tidak bersih");
+        System.out.print("Jawab : ");  
+        setPilih_atap(scan.nextInt());
+        System.out.println("Kondisi atap :"+string3());
+        
+        System.out.println("D. Bagaimana keaadaan pintu");
+        System.out.println("1. bersih");
+        System.out.println("2. tidak bersih");
+        System.out.print("Jawab : ");
+        setPilih_pintu(scan.nextInt());
+        System.out.println("Kondisi pintu :"+string4());
+        
+        System.out.println("E. Bagaimana keaadaan jendela");
+        System.out.println("1. bersih");
+        System.out.println("2. tidak bersih");
+        System.out.print("Jawab : ");
+        setPilih_jendela(scan.nextInt());
+        System.out.println("Kondisi jendela :"+string5());
     }
-    String kebersihan_dinding(){
-        String pilih;
-        if(getPilih_dinding()==dinding){
-            pilih = "sesuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    public void deklarasi2() {
+        System.out.println(kondisi);
+        setKondisiLingkungan(1);
+        System.out.println("A. Bagaimana sirkulasi udara kelas");
+        System.out.println("1. lancar");
+        System.out.println("2. tidak lancar");
+        System.out.print("Jawab : ");
+        setPilih_sirkulasi(scan.nextInt());
+        System.out.println("Sirkulasi udara : "+string6());
+        
+        System.out.println("B. Berapa nilai pencayahan kelas");
+        System.out.print("jawab : ");
+        setPencayahan(scan.nextInt());
+        System.out.println("Pencayahan :"+pencayahan());
+                
+        System.out.println("C. Berapa nilai kelembapan kelas");
+        System.out.print("jawab : ");
+        setKelembapan(scan.nextInt());
+        System.out.println("Kelembapan :"+kelembapan());
+        
+        System.out.println("D. Berapa nilai suhu ruangan");
+        System.out.print("jawab : ");
+        setSuhu(scan.nextInt());
+        System.out.println("Suhu :"+suhu());
     }
-    String kebersihan_jendela(){
-        String pilih;
-        if(getPilih_jendela()==jendela){
-            pilih = "sesuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+    
+    
+    
+    @Override
+    String string1() {   //kebersihan lantai   
+        a=getPilih_lantai();
+        b=lantai;
+        return super.string1();
     }
-    String kebersihan_lantai(){
-        String pilih;
-        if(getPilih_lantai()==lantai){
-            pilih = "sesuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    String string2() {//kebersihan dinding
+        a=getPilih_dinding();
+        b=dinding;
+        return super.string2();
     }
-    String kebersihan_pintu(){
-        String pilih;
-        if(getPilih_pintu()==pintu){
-            pilih = "sesuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+    
+    @Override
+    String string3() {//kebersihan atap
+        a=getPilih_atap();
+        b=atap;
+        return super.string3();
     }
-    String sirkulasi_udara(){
-        String pilih;
-        if(getPilih_sirkulasi()==sirkulasi_udara){
-            pilih = "sesuai";
-        } else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    String string4() {// kebersihan pintu
+        a=getPilih_pintu();
+        b=pintu;
+        return super.string4();
     }
+
+    @Override
+    String string5() {//kebersihan jendela
+        a=getPilih_jendela();
+        b=jendela;
+        return super.string5();
+    }
+
+    @Override
+    String string6() {//sirkulasi udara
+        a=getPilih_sirkulasi();
+        b=sirkulasi_udara;
+        return super.string6();
+    }
+    
     String pencayahan(){
         String pilih;
         if(getPencayahan()>=250 && getPencayahan()<=350){
@@ -186,3 +242,4 @@ public class Lingkungan extends Ruangkelas{
         return pilih;
     }
 }
+

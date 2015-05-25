@@ -10,8 +10,11 @@ import java.util.Scanner;
  *
  * @author NirmalaKarim
  */
-public class Ruangkelas {
+abstract public class Ruangkelas {
     Scanner scan = new Scanner(System.in);
+    /**
+     *
+     */
     String Nama_ruang;
     String Lokasi_ruang;
     String Prodi;
@@ -62,11 +65,14 @@ public class Ruangkelas {
     int kelembapan;
     int suhu;
     String kondisi;
+    int a;
+    int b;
+    int c;
 
     public Ruangkelas(String kondisi) {
         this.kondisi = kondisi;
     }
-    
+
     public String getUsername() {
         return Username;
     }
@@ -105,6 +111,8 @@ public class Ruangkelas {
         this.atap=atap;
         this.dinding=dinding;
         this.lantai=lantai;
+        this.jendela=jendela;
+        this.pintu=pintu;
     }
     public void setKondisiLingkungan(int sirkulasi_udara){
         this.sirkulasi_udara=sirkulasi_udara;
@@ -121,5 +129,75 @@ public class Ruangkelas {
         this.kunci_pintu=kunci_pintu;
         this.kunci_jendela=kunci_jendela;
         this.bahaya=bahaya;
+    }
+    //abtract 
+    abstract void deklarasi1();
+    //abstract void deklarasi2();
+    
+    public interface deklarasi{
+        public void deklarasi2();
+    }
+    String string1 (){
+        String pilih;
+        if(a==b){
+            pilih = "sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String string2 (){
+        String pilih;
+        if(a==b){
+            pilih = "sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String string3 (){
+        String pilih;
+        if (a==b){
+            pilih="sesuai";
+        }else {
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String string4 (){
+        String pilih;
+        if(a==b){
+            pilih = "sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String string5 (){
+        String pilih;
+        if(a==b){
+            pilih = "sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String string6 (){
+        String pilih;
+        if(a==b){
+            pilih = "sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
+    }
+    String string7 (){
+        String pilih;
+        if(a>=b){
+            pilih = "sesuai";
+        }else{
+            pilih="tidak sesuai";
+        }
+        return pilih;
     }
 }

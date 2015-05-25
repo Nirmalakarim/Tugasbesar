@@ -8,7 +8,7 @@
  *
  * @author NirmalaKarim
  */
-public class Kenyamanan extends Ruangkelas{
+public class Kenyamanan extends Ruangkelas implements deklarasi{
     int pilih_kebisingan;
     int pilih_bau;
     int pilih_kebocoran;
@@ -20,7 +20,7 @@ public class Kenyamanan extends Ruangkelas{
     int pilih_bahaya;
 
     public Kenyamanan(String kondisi) {
-        super(kondisi);
+        super(kondisi);//konstraktor
     }
 
     //override
@@ -107,74 +107,130 @@ public class Kenyamanan extends Ruangkelas{
     public void setPilih_bahaya(int pilih_bahaya) {
         this.pilih_bahaya = pilih_bahaya;
     }
-    
-    //untuk mengembalikan nilai
-   String kebisingan(){
-        String pilih;
-        if(getPilih_kebisingan()==kebisingan){
-            pilih = "sessuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    void deklarasi1() {
+        setKondisiKenyamanan(2, 2, 2, 2, 2);
+        System.out.println(kondisi);
+        System.out.println("A. Apakah di kelas bising");
+        System.out.println("1. Bising");
+        System.out.println("2. Tidak Bising");
+        System.out.print("Jawab : ");
+        setPilih_kebisingan(scan.nextInt());
+        System.out.println("Kebisingan :"+string1());
+        
+        System.out.println("B. Apakah di kelas bau");
+        System.out.println("1. Bau");
+        System.out.println("2. Tidak Bau");
+        System.out.print("Jawab : ");
+        setPilih_bau(scan.nextInt());
+        System.out.println("Bau :"+string2());
+               
+        System.out.println("C. Apakah di kelas ada yang bocor");
+        System.out.println("1. Ada ");
+        System.out.println("2. Tidak Ada");
+        System.out.print("Jawab : ");
+        setPilih_kebocoran(scan.nextInt());
+        System.out.println("Kebocoran :"+string3());
+        
+        System.out.println("D. Apakah di kelas ada aus");
+        System.out.println("1. Ada ");
+        System.out.println("2. Tidak Ada");
+        System.out.print("Jawab : ");
+        setPilih_keausan(scan.nextInt());
+        System.out.println("Keausan :"+string4());
+        
+        System.out.println("E. Apakah di kelas ada yang rusak");
+        System.out.println("1. Ada ");
+        System.out.println("2. Tidak Ada ");
+        System.out.print("Jawab : ");
+        setPilih_kerusakan(scan.nextInt());
+        System.out.println("Kerusakan :"+string5());
     }
-    String bau(){
-        String pilih;
-        if(getPilih_bau()==bau){
-            pilih="sesuai";
-        }else{
-            pilih = "tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    public void deklarasi2() {
+        setKondisiKenyamanan(1, 1, 1, 1);
+        System.out.println(kondisi);
+        System.out.println("A. Apakah kelas masih kokoh");
+        System.out.println("1. Masih Kokoh");
+        System.out.println("2. Tidak Kokoh");
+        System.out.print("Jawab : ");
+        setPilih_kekokohan(scan.nextInt());
+        System.out.println("Kekokohan :"+string6());
+        
+        System.out.println("B. Bagaimana keaadaan kunci pintu");
+        System.out.println("1. Ada");
+        System.out.println("2. Tidak ada");
+        System.out.print("Jawab : ");
+        setPilih_kuncipintu(scan.nextInt());
+        
+        System.out.println("C. Bagaimana keaadaan kunci jendela");
+        System.out.println("1. Ada");
+        System.out.println("2. Tidak ada");
+        System.out.print("Jawab : ");
+        setPilih_kuncijendela(scan.nextInt());
+        System.out.println("Analisis kunci pintu dan jendela :"+kunci());
+        
+        System.out.println("D. Apakah di kelas ada Bahaya");
+        System.out.println("1. Aman");
+        System.out.println("2. Tidak Aman");
+        System.out.print("Jawab : ");
+        setPilih_bahaya(scan.nextInt());
+        System.out.println("Keamanan :"+string7());
     }
-    String kebocoran(){
-        String pilih;
-        if(getPilih_kebocoran()==kebocoran){
-            pilih="sesuai";
-        } else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    String string1() {
+        a=getPilih_kebisingan();
+        b=kebisingan;
+        return super.string1();
     }
-    String keausan(){
-        String pilih;
-        if(getPilih_keausan()==keausan){
-            pilih="sesuai";
-        } else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }    
-    String kerusakan(){
-        String pilih;
-        if(getPilih_kerusakan()==kerusakan){
-            pilih="sesuai";
-        } else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    String string2() {
+        a=getPilih_bau();
+        b=bau;
+        return super.string2();
     }
-    String kekokohan(){
-        String pilih;
-        if(getPilih_kekokohan()==kekokohan){
-            pilih="sesuai";
-        } else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
+
+    @Override
+    String string3() {
+        a=getPilih_kebocoran();
+        b=kebocoran;
+        return super.string3();
+    }
+
+    @Override
+    String string4() {
+        a=getPilih_keausan();
+        b=keausan;
+        return super.string4();
+    }
+
+    @Override
+    String string5() {
+        a=getPilih_kerusakan();
+        b=kerusakan;
+        return super.string5();
+    }
+
+    @Override
+    String string6() {
+        a=getPilih_kekokohan();
+        b=kekokohan;
+        return super.string6();
+    }
+
+    @Override
+    String string7() {
+        a=getPilih_bahaya();
+        b=bahaya;
+        return super.string7();
     }
     String kunci(){
         String pilih;
         if(getPilih_kuncipintu()==kunci_pintu && getPilih_kuncijendela()==kunci_jendela){
-            pilih="sesuai";
-        } else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
-    String keamanan (){
-        String pilih;
-        if(getPilih_bahaya()==bahaya){
             pilih="sesuai";
         } else{
             pilih="tidak sesuai";

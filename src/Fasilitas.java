@@ -7,7 +7,7 @@
  *
  * @author Dini Saputri Y
  */
-public class Fasilitas extends Ruangkelas{
+public class Fasilitas extends Ruangkelas implements deklarasi{
     int pilih_kondisisteker;
     int pilih_kondisilampu;
     int pilih_kondisikabel;
@@ -24,7 +24,8 @@ public class Fasilitas extends Ruangkelas{
     public Fasilitas(String kondisi) {
         super(kondisi);
     }
-     @Override
+
+    @Override
     public String getUsername() {
         return super.getUsername();
     }
@@ -210,6 +211,185 @@ public class Fasilitas extends Ruangkelas{
     public void setPosisiCCTV(int posisiCCTV) {
         this.posisiCCTV = posisiCCTV;
     }
+
+    @Override
+    void deklarasi1() {
+        setFasilitas("TugasBesar", "java");
+        setFasilitas(2, 3, 3, 1);
+        setFasilitas(1, 1, 1, 1, 1, 1);
+        System.out.println(kondisi);
+        System.out.println("A. Berapa Jumlah Steker");
+        System.out.print("Jawab :");
+        setJumlahsteker(scan.nextInt());
+        System.out.println("Jumlah steker :"+JumlahSteker());
+        System.out.println("B. Bagaimana Kondisi steker");
+        System.out.println("1. Baik");
+        System.out.println("2. Buruk");
+        System.out.print("Jawab :");
+        setPilih_kondisisteker(scan.nextInt());
+        System.out.println("Kondisi steker :"+string1());
+        System.out.println("C. Dimana posisi steker");
+        System.out.println("1. pojok ruangan ");
+        System.out.println("2. dekat dosen");
+        System.out.println("3. atap");
+        System.out.print("Jawab :");
+        setPosisisteker(scan.nextInt());
+        System.out.print("dan ");
+        setPosisisteker(scan.nextInt());
+        System.out.println("Posisi steker "+posisiSteker());
+        
+        System.out.println("D. Berapa Jumlah Kabel LCD");
+        System.out.print("Jawab :");
+        setJumlahkabelLCD(scan.nextInt());
+        System.out.println("Jumlah kabel LCD :"+JumlahKabelLCD());
+        System.out.println("E. Bagaimana Kondisi Kabel LCD");
+        System.out.println("1. Berfungsi");
+        System.out.println("2. Tidak Berfungsi");
+        System.out.print("Jawab :");
+        setPilih_kondisikabel(scan.nextInt());
+        System.out.println("Kondisi Kabel LCD :"+string2());
+        System.out.println("F. Dimana posisi Kabel LCD");
+        System.out.println("1. pojok ruangan ");
+        System.out.println("2. dekat dosen");
+        System.out.println("3. atap");
+        System.out.print("Jawab :");
+        setPilih_posisikabel(scan.nextInt());
+        System.out.println("Posisi Kabel LCD "+PosisiKabelLCD());
+        
+        System.out.println("G. Berapa Jumlah Lampu");
+        System.out.print("Jawab :");
+        setJumlahlampu(scan.nextInt());
+        System.out.println("Jumlah Lampu :"+JumlahLampu());
+        System.out.println("H. Bagaimana Kondisi Lampu");
+        System.out.println("1. Baik");
+        System.out.println("2. Buruk");
+        System.out.print("Jawab :");
+        setPilih_kondisilampu(scan.nextInt());
+        System.out.println("Kondisi Lampu :"+string3());
+        System.out.println("I. Dimana posisi Lampu");
+        System.out.println("1. pojok ruangan ");
+        System.out.println("2. dekat dosen");
+        System.out.println("3. atap ruangan");
+        System.out.print("Jawab :");
+        setPilih_posisilampu(scan.nextInt());
+        System.out.println("Posisi Lampu :"+PosisiLampu());
+        
+        System.out.println("J. Berapa Jumlah Kipas Angin");
+        System.out.print("Jawab :");
+        setJumlahkipasangin(scan.nextInt());
+        System.out.println("Jumlah Kipas Angin :"+JumlahKipasAngin());
+        System.out.println("K. Bagaimana Kondisi Kipas Angin");
+        System.out.println("1. Baik");
+        System.out.println("2. Buruk");
+        System.out.print("Jawab :");
+        setPilih_kondisikipas(scan.nextInt());
+        System.out.println("Kondisi Kipas Angin :"+string4());
+        System.out.println("L. Dimana posisi Kipas Angin");
+        System.out.println("1. pojok ruangan ");
+        System.out.println("2. dekat dosen");
+        System.out.println("3. atap ruangan");
+        System.out.print("Jawab :");
+        setPilih_posisikipas(scan.nextInt());
+        System.out.println("Posisi Kipas Angin :"+PosisiKipasAngin());
+        
+        System.out.println("M. Berapa Jumlah AC");
+        System.out.print("Jawab :");
+        setJumlahAC(scan.nextInt());
+        System.out.println("Jumlah AC :"+JumlahAC());
+        System.out.println("N. Bagaimana Kondisi AC");
+        System.out.println("1. Baik");
+        System.out.println("2. Buruk");
+        System.out.print("Jawab :");
+        setPilih_kondisiac(scan.nextInt());
+        System.out.println("Kondisi AC :"+string5());
+        System.out.println("O. Dimana posisi AC");
+        System.out.println("1. Belakang ");
+        System.out.println("2. Atap");
+        System.out.println("3. Depan");
+        System.out.print("Jawab :");
+        setPilih_posisiac(scan.nextInt());
+        System.out.println("Posisi AC :"+PosisiAC());
+        
+        System.out.println("P. Silahkan pilih SSID");
+        System.out.println("1. UMM Hotspot");
+        System.out.println("2. RiaJenaka");
+        System.out.println("3. Otoy");
+        System.out.print("Jawab :");
+        setSSID(scan.nextInt());
+        System.out.println("SSID :"+SSID());
+        System.out.println("Q. Silahkan Login");
+        System.out.print("Username :");
+        pilih_username=scan.next();
+        System.out.print("Pasword");
+        pilih_pasword=scan.next();
+        System.out.println("username :"+loginusername());
+        System.out.println("Pasword :"+loginpasword());
+        
+        System.out.println("G. Berapa Jumlah CCTV");
+        System.out.print("Jawab :");
+        setJumlahCCTV(scan.nextInt());
+        System.out.println("Jumlah CCTV :"+JumlahCCTV());
+        System.out.println("H. Bagaimana Kondisi CCTV");
+        System.out.println("1. Baik");
+        System.out.println("2. Buruk");
+        System.out.print("Jawab :");
+        setPilih_kondisicctv(scan.nextInt());
+        System.out.println("Kondisi CCTV :"+string6());
+        System.out.println("I. Dimana posisi CCTV");
+        System.out.println("1. Belakang ");
+        System.out.println("2. Samping");
+        System.out.println("3. Depan");
+        System.out.print("Jawab :");
+        setPosisiCCTV(scan.nextInt());
+        System.out.println("Posisi CCTV :"+PosisiCCTV());
+    }
+
+    @Override
+    public void deklarasi2() {
+        
+    }
+
+    @Override
+    String string1() {
+        a=getPilih_kondisisteker();
+        b=kondisisteker;
+        return super.string1();
+    }
+
+    @Override
+    String string2() {
+        a=getPilih_kondisikabel();
+        b=kondisikabelLCD;
+        return super.string2();
+    }
+
+    @Override
+    String string3() {
+        a=getPilih_kondisilampu();
+        b=kondisilampu;
+        return super.string3();
+    }
+
+    @Override
+    String string4() {
+        a=getPilih_kondisikipas();
+        b=kondisikipasangin;
+        return super.string4();
+    }
+
+    @Override
+    String string5() {
+        a=getPilih_kondisiac();
+        b=kondisiAC;
+        return super.string5();
+    }
+
+    @Override
+    String string6() {
+        a=kondisiCCTV;
+        b=kondisiCCTV;
+        return super.string6();
+    }
     
     String JumlahSteker (){
         String pilih ;
@@ -220,15 +400,7 @@ public class Fasilitas extends Ruangkelas{
         }
         return pilih;
     }
-    String kondisiSteker (){
-        String pilih ;
-        if(getPilih_kondisisteker()==kondisisteker){
-            pilih="sesuai";
-        }else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
+    
     String posisiSteker (){
         String pilih ;
         if(getPosisisteker()>=1&&getPosisisteker()<=2){
@@ -241,15 +413,6 @@ public class Fasilitas extends Ruangkelas{
     String JumlahKabelLCD(){
         String pilih;
         if(getJumlahkabelLCD()>=1){
-            pilih="sesuai";
-        }else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
-    String KondisiKabelLCD(){
-        String pilih;
-        if(getPilih_kondisikabel()==kondisikabelLCD){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -274,15 +437,6 @@ public class Fasilitas extends Ruangkelas{
         }
         return pilih;
     }
-    String KondisiLampu(){
-        String pilih;
-        if(getPilih_kondisilampu()==kondisilampu){
-            pilih="sesuai";
-        }else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
     String PosisiLampu(){
         String pilih;
         if(getPilih_posisilampu()==posisilampu){
@@ -295,15 +449,6 @@ public class Fasilitas extends Ruangkelas{
     String JumlahKipasAngin(){
         String pilih;
         if(getJumlahkipasangin()>=2){
-            pilih="sesuai";
-        }else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
-    String KondisiKipasAngin(){
-        String pilih;
-        if(getPilih_kondisikipas()==kondisikipasangin){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -328,15 +473,6 @@ public class Fasilitas extends Ruangkelas{
         }
         return pilih;
     }
-    String KondisiAC(){
-        String pilih;
-        if(getPilih_kondisiac()==kondisiAC){
-            pilih="sesuai";
-        }else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
     String PosisiAC(){
         String pilih;
         if(getPilih_posisiac()== posisiAC){
@@ -349,15 +485,6 @@ public class Fasilitas extends Ruangkelas{
     String JumlahCCTV(){
         String pilih;
         if(getJumlahCCTV()==2){
-            pilih="sesuai";
-        }else{
-            pilih="tidak sesuai";
-        }
-        return pilih;
-    }
-    String KondisiCCTV(){
-        String pilih;
-        if(getPilih_kondisicctv()==kondisiCCTV){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
