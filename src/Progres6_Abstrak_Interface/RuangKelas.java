@@ -1,8 +1,16 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Progres6_Abstrak_Interface;
 
 import java.util.Scanner;
 
-
-public class Ruangkelas {
+/**
+ *
+ * @author NirmalaKarim
+ */
+abstract public class RuangKelas {
     Scanner scan = new Scanner(System.in);
     /**
      *
@@ -60,8 +68,8 @@ public class Ruangkelas {
     int a;
     int b;
     int c;
-
-    public Ruangkelas(String kondisi) {
+    
+    public RuangKelas(String kondisi) {//Konstraktor
         this.kondisi = kondisi;
     }
 
