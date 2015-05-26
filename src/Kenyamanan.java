@@ -1,40 +1,25 @@
-
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
+ * and open the template in the editor
 /**
  *
  * @author NirmalaKarim
  */
-public class Kenyamanan extends Ruangkelas implements deklarasi{
-    int pilih_kebisingan;
-    int pilih_bau;
-    int pilih_kebocoran;
-    int pilih_kerusakan;
-    int pilih_keausan;
-    int pilih_kekokohan;
-    int pilih_kuncipintu;
-    int pilih_kuncijendela;
-    int pilih_bahaya;
+public class Kenyamanan extends Ruangkelas implements Deklarasi{
+    private int pilih_kebisingan;
+    private int pilih_bau;
+    private int pilih_kebocoran;
+    private int pilih_kerusakan;
+    private int pilih_keausan;
+    private int pilih_kekokohan;
+    private int pilih_kuncipintu;
+    private int pilih_kuncijendela;
+    private int pilih_bahaya;
 
     public Kenyamanan(String kondisi) {
         super(kondisi);//konstraktor
     }
 
-    //override
-    @Override
-    public void setKondisiKenyamanan(int kebisingan, int bau, int kebocoran, int kerusakan, int keausan) {
-        super.setKondisiKenyamanan(kebisingan, bau, kebocoran, kerusakan, keausan);
-    }
-
-    @Override
-    public void setKondisiKenyamanan(int kekokohan, int kunci_pintu, int kunci_jendela, int bahaya) {
-        super.setKondisiKenyamanan(kekokohan, kunci_pintu, kunci_jendela, bahaya);
-    }
-    
-    
     //enkapsulasi
     public int getPilih_kebisingan() {
         return pilih_kebisingan;
@@ -111,7 +96,7 @@ public class Kenyamanan extends Ruangkelas implements deklarasi{
     @Override
     void deklarasi1() {
         setKondisiKenyamanan(2, 2, 2, 2, 2);
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         System.out.println("A. Apakah di kelas bising");
         System.out.println("1. Bising");
         System.out.println("2. Tidak Bising");
@@ -151,7 +136,7 @@ public class Kenyamanan extends Ruangkelas implements deklarasi{
     @Override
     public void deklarasi2() {
         setKondisiKenyamanan(1, 1, 1, 1);
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         System.out.println("A. Apakah kelas masih kokoh");
         System.out.println("1. Masih Kokoh");
         System.out.println("2. Tidak Kokoh");
@@ -183,54 +168,54 @@ public class Kenyamanan extends Ruangkelas implements deklarasi{
     @Override
     String string1() {
         a=getPilih_kebisingan();
-        b=kebisingan;
+        b=getKebisingan();
         return super.string1();
     }
 
     @Override
     String string2() {
         a=getPilih_bau();
-        b=bau;
+        b=getBau();
         return super.string2();
     }
 
     @Override
     String string3() {
         a=getPilih_kebocoran();
-        b=kebocoran;
+        b=getKebocoran();
         return super.string3();
     }
 
     @Override
     String string4() {
         a=getPilih_keausan();
-        b=keausan;
+        b=getKeausan();
         return super.string4();
     }
 
     @Override
     String string5() {
         a=getPilih_kerusakan();
-        b=kerusakan;
+        b=getKerusakan();
         return super.string5();
     }
 
     @Override
     String string6() {
         a=getPilih_kekokohan();
-        b=kekokohan;
+        b=getKekokohan();
         return super.string6();
     }
 
     @Override
     String string7() {
         a=getPilih_bahaya();
-        b=bahaya;
+        b=getBahaya();
         return super.string7();
     }
     String kunci(){
         String pilih;
-        if(getPilih_kuncipintu()==kunci_pintu && getPilih_kuncijendela()==kunci_jendela){
+        if(getPilih_kuncipintu()==getKunci_pintu() && getPilih_kuncijendela()==getKunci_jendela()){
             pilih="sesuai";
         } else{
             pilih="tidak sesuai";
