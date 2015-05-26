@@ -1,4 +1,3 @@
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -7,27 +6,16 @@
  *
  * @author NirmalaKarim
  */
-public class Lingkungan extends Ruangkelas implements deklarasi{
-    int pilih_atap;
-    int pilih_dinding;
-    int pilih_jendela;
-    int pilih_pintu;
-    int pilih_lantai;
-    int pilih_sirkulasi;
+public class Lingkungan extends Ruangkelas implements Deklarasi{
+    private int pilih_atap;
+    private int pilih_dinding;
+    private int pilih_jendela;
+    private int pilih_pintu;
+    private int pilih_lantai;
+    private int pilih_sirkulasi;
     public Lingkungan(String kondisi) {//konstraktor
         super(kondisi);
     }
-    
-    @Override//override
-    public void setKondisiLingkungan(int lantai, int dinding, int atap, int pintu, int jendela) {
-        super.setKondisiLingkungan(lantai, dinding, atap, pintu, jendela);
-    }
-
-    @Override//override
-    public void setKondisiLingkungan(int sirkulasi_udara) {
-        super.setKondisiLingkungan(sirkulasi_udara);
-    }
-    
     
     //enkapsulasi
     public int getPilih_atap() {
@@ -78,35 +66,10 @@ public class Lingkungan extends Ruangkelas implements deklarasi{
         this.pilih_sirkulasi = pilih_sirkulasi;
     }
     
-    public int getPencayahan() {
-        return pencayahan;
-    }
-
-    public void setPencayahan(int pencayahan) {
-        this.pencayahan = pencayahan;
-    }
-
-    public int getKelembapan() {
-        return kelembapan;
-    }
-
-    public void setKelembapan(int kelembapan) {
-        this.kelembapan = kelembapan;
-    }
-
-    public int getSuhu() {
-        return suhu;
-    }
-
-    public void setSuhu(int suhu) {
-        this.suhu = suhu;
-    }
-    
-
     @Override
     void deklarasi1() {
         setKondisiLingkungan(1, 1, 1, 1, 1);
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         System.out.println("A. Bagaimana keaadaan lantai");
         System.out.println("1. bersih ");
         System.out.println("2. tidak bersih");
@@ -145,7 +108,7 @@ public class Lingkungan extends Ruangkelas implements deklarasi{
 
     @Override
     public void deklarasi2() {
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         setKondisiLingkungan(1);
         System.out.println("A. Bagaimana sirkulasi udara kelas");
         System.out.println("1. lancar");
@@ -175,42 +138,42 @@ public class Lingkungan extends Ruangkelas implements deklarasi{
     @Override
     String string1() {   //kebersihan lantai   
         a=getPilih_lantai();
-        b=lantai;
+        b=getLantai();
         return super.string1();
     }
 
     @Override
     String string2() {//kebersihan dinding
         a=getPilih_dinding();
-        b=dinding;
+        b=getDinding();
         return super.string2();
     }
     
     @Override
     String string3() {//kebersihan atap
         a=getPilih_atap();
-        b=atap;
+        b=getAtap();
         return super.string3();
     }
 
     @Override
     String string4() {// kebersihan pintu
         a=getPilih_pintu();
-        b=pintu;
+        b=getPintu();
         return super.string4();
     }
 
     @Override
     String string5() {//kebersihan jendela
         a=getPilih_jendela();
-        b=jendela;
+        b=getJendela();
         return super.string5();
     }
 
     @Override
     String string6() {//sirkulasi udara
         a=getPilih_sirkulasi();
-        b=sirkulasi_udara;
+        b=getSirkulasi_udara();
         return super.string6();
     }
     
@@ -242,4 +205,3 @@ public class Lingkungan extends Ruangkelas implements deklarasi{
         return pilih;
     }
 }
-
