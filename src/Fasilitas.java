@@ -2,62 +2,26 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author Dini Saputri Y
+ * @author NirmalaKarim
  */
-public class Fasilitas extends Ruangkelas implements deklarasi{
-    int pilih_kondisisteker;
-    int pilih_kondisilampu;
-    int pilih_kondisikabel;
-    int pilih_kondisikipas;
-    int pilih_kondisiac;
-    int pilih_kondisicctv;
-    int pilih_posisikabel;
-    int pilih_posisilampu;
-    int pilih_posisikipas;
-    int pilih_posisiac;
-    String pilih_username;
-    String pilih_pasword;
+public class Fasilitas extends Ruangkelas implements Deklarasi{
+    private int pilih_kondisisteker;
+    private int pilih_kondisilampu;
+    private int pilih_kondisikabel;
+    private int pilih_kondisikipas;
+    private int pilih_kondisiac;
+    private int pilih_kondisicctv;
+    private int pilih_posisikabel;
+    private int pilih_posisilampu;
+    private int pilih_posisikipas;
+    private int pilih_posisiac;
+    private String pilih_username;
+    private String pilih_pasword;
 
     public Fasilitas(String kondisi) {
         super(kondisi);
-    }
-
-    @Override
-    public String getUsername() {
-        return super.getUsername();
-    }
-
-    @Override
-    public void setUsername(String Username) {
-        super.setUsername(Username);
-    }
-
-    @Override
-    public String getPasword() {
-        return super.getPasword();
-    }
-
-    @Override
-    public void setPasword(String pasword) {
-        super.setPasword(pasword);
-    }
-
-    @Override
-    public void setFasilitas(String username, String pasword) {
-        super.setFasilitas(username, pasword);
-    }
-    
-    @Override
-    public void setFasilitas(int kondisisteker, int kondisikabelLCD, int kondisilampu, int kondisikipasangin, int kondisiAC, int kondisiCCTV) {
-        super.setFasilitas(kondisisteker, kondisikabelLCD, kondisilampu, kondisikipasangin, kondisiAC, kondisiCCTV);
-    }
-
-    @Override
-    public void setFasilitas(int posisikabelLCD, int posisilampu, int posisikipasangin, int posisiAC) {
-        super.setFasilitas(posisikabelLCD, posisilampu, posisikipasangin, posisiAC);
     }
 
     public int getPilih_kondisisteker() {
@@ -140,84 +104,12 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
         this.pilih_posisiac = pilih_posisiac;
     }
 
-    public int getSSID() {
-        return SSID;
-    }
-
-    public void setSSID(int SSID) {
-        this.SSID = SSID;
-    }
-
-    public int getJumlahsteker() {
-        return Jumlahsteker;
-    }
-
-    public void setJumlahsteker(int Jumlahsteker) {
-        this.Jumlahsteker = Jumlahsteker;
-    }
-
-    public int getJumlahkabelLCD() {
-        return jumlahkabelLCD;
-    }
-
-    public void setJumlahkabelLCD(int jumlahkabelLCD) {
-        this.jumlahkabelLCD = jumlahkabelLCD;
-    }
-
-    public int getJumlahlampu() {
-        return jumlahlampu;
-    }
-
-    public void setJumlahlampu(int jumlahlampu) {
-        this.jumlahlampu = jumlahlampu;
-    }
-
-    public int getJumlahkipasangin() {
-        return jumlahkipasangin;
-    }
-
-    public void setJumlahkipasangin(int jumlahkipasangin) {
-        this.jumlahkipasangin = jumlahkipasangin;
-    }
-
-    public int getJumlahAC() {
-        return jumlahAC;
-    }
-
-    public void setJumlahAC(int jumlahAC) {
-        this.jumlahAC = jumlahAC;
-    }
-
-    public int getJumlahCCTV() {
-        return jumlahCCTV;
-    }
-
-    public void setJumlahCCTV(int jumlahCCTV) {
-        this.jumlahCCTV = jumlahCCTV;
-    }
-
-    public int getPosisisteker() {
-        return posisisteker;
-    }
-
-    public void setPosisisteker(int posisisteker) {
-        this.posisisteker = posisisteker;
-    }
-
-    public int getPosisiCCTV() {
-        return posisiCCTV;
-    }
-
-    public void setPosisiCCTV(int posisiCCTV) {
-        this.posisiCCTV = posisiCCTV;
-    }
-
     @Override
     void deklarasi1() {
         setFasilitas("TugasBesar", "java");
         setFasilitas(2, 3, 3, 1);
         setFasilitas(1, 1, 1, 1, 1, 1);
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         System.out.println("A. Berapa Jumlah Steker");
         System.out.print("Jawab :");
         setJumlahsteker(scan.nextInt());
@@ -352,42 +244,42 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
     @Override
     String string1() {
         a=getPilih_kondisisteker();
-        b=kondisisteker;
+        b=getKondisisteker();
         return super.string1();
     }
 
     @Override
     String string2() {
         a=getPilih_kondisikabel();
-        b=kondisikabelLCD;
+        b=getKondisikabelLCD();
         return super.string2();
     }
 
     @Override
     String string3() {
         a=getPilih_kondisilampu();
-        b=kondisilampu;
+        b=getKondisilampu();
         return super.string3();
     }
 
     @Override
     String string4() {
         a=getPilih_kondisikipas();
-        b=kondisikipasangin;
+        b=getKondisikipasangin();
         return super.string4();
     }
 
     @Override
     String string5() {
         a=getPilih_kondisiac();
-        b=kondisiAC;
+        b=getKondisiAC();
         return super.string5();
     }
 
     @Override
     String string6() {
-        a=kondisiCCTV;
-        b=kondisiCCTV;
+        a=getPilih_kondisicctv();
+        b=getKondisiCCTV();
         return super.string6();
     }
     
@@ -421,7 +313,7 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
     }
     String PosisiKabelLCD(){
         String pilih;
-        if(getPilih_posisikabel()==posisikabelLCD){
+        if(getPilih_posisikabel()==getPosisikabelLCD()){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -439,7 +331,7 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
     }
     String PosisiLampu(){
         String pilih;
-        if(getPilih_posisilampu()==posisilampu){
+        if(getPilih_posisilampu()==getPosisilampu()){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -457,7 +349,7 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
     }
     String PosisiKipasAngin(){
         String pilih;
-        if(getPilih_posisikipas()==posisikipasangin){
+        if(getPilih_posisikipas()==getPosisikipasangin()){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -475,7 +367,7 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
     }
     String PosisiAC(){
         String pilih;
-        if(getPilih_posisiac()== posisiAC){
+        if(getPilih_posisiac()== getPosisiAC()){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -528,4 +420,6 @@ public class Fasilitas extends Ruangkelas implements deklarasi{
         }
         return pilih;
     }
+    
+    
 }
