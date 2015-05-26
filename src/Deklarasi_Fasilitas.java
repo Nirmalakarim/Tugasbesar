@@ -1,8 +1,13 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-import java.util.Scanner;
-
-public class Deklarasi_Fasilitas{
-   Scanner scan = new Scanner(System.in);
+/**
+ *
+ * @author NirmalaKarim
+ */
+public class Deklarasi_Fasilitas {
     void deklarasi (){
         analisa_sarana(new Fasilitas("Tahap Jumlah, Kondisi, Posisi Sarana"));
     }
@@ -11,7 +16,3 @@ public class Deklarasi_Fasilitas{
         kondisi.deklarasi1();
     }
 }
-
-
-
-
