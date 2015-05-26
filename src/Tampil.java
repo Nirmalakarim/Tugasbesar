@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author NirmalaKarim
@@ -13,9 +12,9 @@ public class Tampil {
         Deklarasi_Kenyamanan test2 = new Deklarasi_Kenyamanan();
         Deklarasi_kondisi test3 = new Deklarasi_kondisi(); 
         Deklarasi_Fasilitas test4 = new Deklarasi_Fasilitas();
-        //test3.deklarasi();
-        //test4.deklarasi();
         test1.deklarasi();
+        test3.deklarasi();
+        test4.deklarasi();  
         test2.deklarasi();
     }
 }
