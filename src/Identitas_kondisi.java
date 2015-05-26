@@ -7,90 +7,14 @@
  *
  * @author NirmalaKarim
  */
-public class Identitas_kondisi extends Ruangkelas{
+public class Identitas_kondisi extends Ruangkelas implements Deklarasi{
+    
     public Identitas_kondisi(String kondisi) {
         super(kondisi);
     }
-
-    @Override
-    public String getPasword() {
-        return super.getPasword();
-    }
-
-    @Override
-    public String getUsername() {
-        return super.getUsername();
-    }
-    
-    
-    public String getNama_ruang() {
-        return Nama_ruang;
-    }
-
-    public void setNama_ruang(String Nama_ruang) {
-        this.Nama_ruang = Nama_ruang;
-    }
-
-    public String getLokasi_ruang() {
-        return Lokasi_ruang;
-    }
-
-    public void setLokasi_ruang(String Lokasi_ruang) {
-        this.Lokasi_ruang = Lokasi_ruang;
-    }
-
-    public String getProdi() {
-        return Prodi;
-    }
-
-    public void setProdi(String Prodi) {
-        this.Prodi = Prodi;
-    }
-
-    public int getPanjang_ruang() {
-        return Panjang_ruang;
-    }
-
-    public void setPanjang_ruang(int Panjang_ruang) {
-        this.Panjang_ruang = Panjang_ruang;
-    }
-
-    public int getLebar_ruang() {
-        return Lebar_ruang;
-    }
-
-    public void setLebar_ruang(int Lebar_ruang) {
-        this.Lebar_ruang = Lebar_ruang;
-    }
-
-    public int getJumlah_kursi() {
-        return Jumlah_kursi;
-    }
-
-    public void setJumlah_kursi(int Jumlah_kursi) {
-        this.Jumlah_kursi = Jumlah_kursi;
-    }
-
-    public int getJumlah_jendela() {
-        return Jumlah_jendela;
-    }
-
-    public void setJumlah_jendela(int Jumlah_jendela) {
-        this.Jumlah_jendela = Jumlah_jendela;
-    }
-
-    
-    public int getJumlah_pintu() {
-        return jumlah_pintu;
-    }
-
-    public void setJumlah_pintu(int jumlah_pintu) {
-        this.jumlah_pintu = jumlah_pintu;
-    }
-
     @Override
     void deklarasi1() {
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         System.out.print("Masukan nama ruang :");
         setNama_ruang(scan.next());
         System.out.print("Masukan lokasi ruang :");
@@ -106,7 +30,7 @@ public class Identitas_kondisi extends Ruangkelas{
 
     @Override
     public void deklarasi2() {
-        System.out.println(kondisi);
+        System.out.println(getKondisi());
         System.out.println("A. Masukan panjang ruang ");
         System.out.print("Jawab :");
         setPanjang_ruang(scan.nextInt());
