@@ -2,6 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 /**
  *
  * @author NirmalaKarim
@@ -24,6 +27,23 @@ public class Fasilitas extends Ruangkelas implements Deklarasi{
         super(kondisi);
     }
 
+    public String getPilih_username() {
+        return pilih_username;
+    }
+
+    public void setPilih_username(String pilih_username) {
+        this.pilih_username = pilih_username;
+    }
+
+    public String getPilih_pasword() {
+        return pilih_pasword;
+    }
+
+    public void setPilih_pasword(String pilih_pasword) {
+        this.pilih_pasword = pilih_pasword;
+    }
+
+    
     public int getPilih_kondisisteker() {
         return pilih_kondisisteker;
     }
@@ -211,9 +231,9 @@ public class Fasilitas extends Ruangkelas implements Deklarasi{
         System.out.println("SSID :"+SSID());
         System.out.println("Q. Silahkan Login");
         System.out.print("Username :");
-        pilih_username=scan.next();
+        setPilih_username(scan.next());
         System.out.print("Pasword");
-        pilih_pasword=scan.next();
+        setPilih_pasword(scan.next());
         System.out.println("username :"+loginusername());
         System.out.println("Pasword :"+loginpasword());
         
@@ -234,6 +254,33 @@ public class Fasilitas extends Ruangkelas implements Deklarasi{
         System.out.print("Jawab :");
         setPosisiCCTV(scan.nextInt());
         System.out.println("Posisi CCTV :"+PosisiCCTV());
+        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(getPilih_kondisisteker());
+            os.writeObject(getJumlahsteker());
+            os.writeObject(getPosisisteker());
+            os.writeObject(getJumlahkabelLCD());
+            os.writeObject(getPilih_kondisikabel());
+            os.writeObject(getPilih_posisikabel());
+            os.writeObject(getJumlahlampu());
+            os.writeObject(getPilih_kondisilampu());
+            os.writeObject(getPilih_posisilampu());
+            os.writeObject(getJumlahkipasangin());
+            os.writeObject(getPilih_kondisikipas());
+            os.writeObject(getPilih_posisikipas());
+            os.writeObject(getJumlahAC());
+            os.writeObject(getPilih_kondisiac());
+            os.writeObject(getPilih_posisiac());
+            os.writeObject(getSSID());
+            os.writeObject(getPilih_username());
+            os.writeObject(getPilih_pasword());
+            os.writeObject(getJumlahCCTV());
+            os.writeObject(getPilih_kondisicctv());
+            os.writeObject(getPosisiCCTV());
+            os.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
