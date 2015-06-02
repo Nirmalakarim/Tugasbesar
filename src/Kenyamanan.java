@@ -1,6 +1,10 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor
+ * and open the template in the editor.
+ */
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 /**
  *
  * @author NirmalaKarim
@@ -131,6 +135,18 @@ public class Kenyamanan extends Ruangkelas implements Deklarasi{
         System.out.print("Jawab : ");
         setPilih_kerusakan(scan.nextInt());
         System.out.println("Kerusakan :"+string5());
+        
+        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(getPilih_kebisingan());
+            os.writeObject(getPilih_bau());
+            os.writeObject(getPilih_kebocoran());
+            os.writeObject(getPilih_keausan());
+            os.writeObject(getPilih_kerusakan());
+            os.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -163,6 +179,17 @@ public class Kenyamanan extends Ruangkelas implements Deklarasi{
         System.out.print("Jawab : ");
         setPilih_bahaya(scan.nextInt());
         System.out.println("Keamanan :"+string7());
+        
+        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(getPilih_kekokohan());
+            os.writeObject(getPilih_kuncipintu());
+            os.writeObject(getPilih_kuncijendela());
+            os.writeObject(getPilih_bahaya());
+            os.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
