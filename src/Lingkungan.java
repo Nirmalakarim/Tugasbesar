@@ -2,6 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
 /**
  *
  * @author NirmalaKarim
@@ -104,6 +109,19 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
         System.out.print("Jawab : ");
         setPilih_jendela(scan.nextInt());
         System.out.println("Kondisi jendela :"+string5());
+            try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+                ObjectOutputStream os;
+                os = new ObjectOutputStream(fs);
+                os.writeObject(getPilih_lantai());
+                os.writeObject(getPilih_dinding());
+                os.writeObject(getPilih_jendela());
+                os.writeObject(getPilih_atap());
+                os.writeObject(getPilih_pintu());
+                os.close();
+                
+            } catch(IOException e){
+                e.printStackTrace();
+            }
     }
 
     @Override
@@ -131,6 +149,17 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
         System.out.print("jawab : ");
         setSuhu(scan.nextInt());
         System.out.println("Suhu :"+suhu());
+        
+        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(getPilih_sirkulasi());
+            os.writeObject(getPencayahan());
+            os.writeObject(getKelembapan());
+            os.writeObject(getSuhu());
+            os.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
     
