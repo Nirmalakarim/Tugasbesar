@@ -1,14 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-/**
- *
- * @author NirmalaKarim
- */
+
 public class Kenyamanan extends Ruangkelas implements Deklarasi{
     private int pilih_kebisingan;
     private int pilih_bau;
@@ -101,21 +94,21 @@ public class Kenyamanan extends Ruangkelas implements Deklarasi{
     void deklarasi1() {
         setKondisiKenyamanan(2, 2, 2, 2, 2);
         System.out.println(getKondisi());
-        System.out.println("A. Apakah di kelas bising");
+        System.out.println("A. Apakah di kelas bising?");
         System.out.println("1. Bising");
         System.out.println("2. Tidak Bising");
         System.out.print("Jawab : ");
         setPilih_kebisingan(scan.nextInt());
         System.out.println("Kebisingan :"+string1());
         
-        System.out.println("B. Apakah di kelas bau");
+        System.out.println("B. Apakah di kelas bau?");
         System.out.println("1. Bau");
         System.out.println("2. Tidak Bau");
         System.out.print("Jawab : ");
         setPilih_bau(scan.nextInt());
         System.out.println("Bau :"+string2());
                
-        System.out.println("C. Apakah di kelas ada yang bocor");
+        System.out.println("C. Apakah di kelas ada yang bocor?");
         System.out.println("1. Ada ");
         System.out.println("2. Tidak Ada");
         System.out.print("Jawab : ");
@@ -129,7 +122,7 @@ public class Kenyamanan extends Ruangkelas implements Deklarasi{
         setPilih_keausan(scan.nextInt());
         System.out.println("Keausan :"+string4());
         
-        System.out.println("E. Apakah di kelas ada yang rusak");
+        System.out.println("E. Apakah di kelas ada yang rusak?");
         System.out.println("1. Ada ");
         System.out.println("2. Tidak Ada ");
         System.out.print("Jawab : ");
@@ -153,27 +146,27 @@ public class Kenyamanan extends Ruangkelas implements Deklarasi{
     public void deklarasi2() {
         setKondisiKenyamanan(1, 1, 1, 1);
         System.out.println(getKondisi());
-        System.out.println("A. Apakah kelas masih kokoh");
+        System.out.println("A. Apakah kelas masih kokoh?");
         System.out.println("1. Masih Kokoh");
         System.out.println("2. Tidak Kokoh");
         System.out.print("Jawab : ");
         setPilih_kekokohan(scan.nextInt());
         System.out.println("Kekokohan :"+string6());
         
-        System.out.println("B. Bagaimana keaadaan kunci pintu");
+        System.out.println("B. Bagaimana keaadaan kunci pintu?");
         System.out.println("1. Ada");
         System.out.println("2. Tidak ada");
         System.out.print("Jawab : ");
         setPilih_kuncipintu(scan.nextInt());
         
-        System.out.println("C. Bagaimana keaadaan kunci jendela");
+        System.out.println("C. Bagaimana keaadaan kunci jendela?");
         System.out.println("1. Ada");
         System.out.println("2. Tidak ada");
         System.out.print("Jawab : ");
         setPilih_kuncijendela(scan.nextInt());
         System.out.println("Analisis kunci pintu dan jendela :"+kunci());
         
-        System.out.println("D. Apakah di kelas ada Bahaya");
+        System.out.println("D. Apakah di kelas ada Bahaya?");
         System.out.println("1. Aman");
         System.out.println("2. Tidak Aman");
         System.out.print("Jawab : ");
