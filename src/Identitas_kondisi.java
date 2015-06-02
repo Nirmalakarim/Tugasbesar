@@ -1,14 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-/**
- *
- * @author NirmalaKarim
- */
+
+
 public class Identitas_kondisi extends Ruangkelas implements Deklarasi{
     
     public Identitas_kondisi(String kondisi) {
@@ -42,23 +36,23 @@ public class Identitas_kondisi extends Ruangkelas implements Deklarasi{
     @Override
     public void deklarasi2() {
         System.out.println(getKondisi());
-        System.out.println("A. Masukan panjang ruang ");
+        System.out.println("A. Masukan panjang ruang? ");
         System.out.print("Jawab :");
         setPanjang_ruang(scan.nextInt());
-        System.out.println("B. Masukan lebar ruang ");
+        System.out.println("B. Masukan lebar ruang? ");
         System.out.print("Jawab :");
         setLebar_ruang(scan.nextInt());
         System.out.println("C. Luas : "+luas());
         System.out.println("D. Bentuk : "+bentuk());
-        System.out.println("E. Masukan jumlah kursi");
+        System.out.println("E. Masukan jumlah kursi ?");
         System.out.print("Jawab :");
         setJumlah_kursi(scan.nextInt());
         System.out.println("F. Rasio : "+rasio());
         System.out.println("Rasio : "+Analisis_rasio());
-        System.out.println("G. Masukan jumlah pintu ");
+        System.out.println("G. Masukan jumlah pintu? ");
         System.out.print("Jawab :");
         setJumlah_pintu(scan.nextInt());
-        System.out.println("H. Masukan jumlah jendela");
+        System.out.println("H. Masukan jumlah jendela?");
         System.out.print("Jawab : ");
         setJumlah_jendela(scan.nextInt());
         System.out.println("Jumlah pintu dan jendela :"+analisisPintuDanJendela());
