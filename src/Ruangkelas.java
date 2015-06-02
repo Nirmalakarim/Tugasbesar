@@ -2,13 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author NirmalaKarim
  */
-abstract public class Ruangkelas {
+abstract public class Ruangkelas implements Serializable{
     Scanner scan = new Scanner(System.in);
     private String Nama_ruang;
     private String Lokasi_ruang;
