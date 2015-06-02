@@ -2,7 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 /**
  *
  * @author NirmalaKarim
@@ -26,6 +28,15 @@ public class Identitas_kondisi extends Ruangkelas implements Deklarasi{
         System.out.println("Nama ruang : "+getNama_ruang());
         System.out.println("Lokasi Ruang : "+getLokasi_ruang());
         System.out.println("Jurusan : "+getProdi());
+        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(getNama_ruang());
+            os.writeObject(getLokasi_ruang());
+            os.writeObject(getProdi());
+            os.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -51,6 +62,18 @@ public class Identitas_kondisi extends Ruangkelas implements Deklarasi{
         System.out.print("Jawab : ");
         setJumlah_jendela(scan.nextInt());
         System.out.println("Jumlah pintu dan jendela :"+analisisPintuDanJendela());
+        
+        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(getPanjang_ruang());
+            os.writeObject(getLebar_ruang());
+            os.writeObject(getJumlah_kursi());
+            os.writeObject(getJumlah_jendela());
+            os.writeObject(getJumlah_pintu());
+            os.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     
