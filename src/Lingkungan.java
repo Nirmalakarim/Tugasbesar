@@ -1,16 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-/**
- *
- * @author NirmalaKarim
- */
+
 public class Lingkungan extends Ruangkelas implements Deklarasi{
     private int pilih_atap;
     private int pilih_dinding;
@@ -75,35 +67,35 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
     void deklarasi1() {
         setKondisiLingkungan(1, 1, 1, 1, 1);
         System.out.println(getKondisi());
-        System.out.println("A. Bagaimana keaadaan lantai");
+        System.out.println("A. Bagaimana keaadaan lantai?");
         System.out.println("1. bersih ");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setPilih_lantai(scan.nextInt());
         System.out.println("Kondisi lantai :"+string1());
         
-        System.out.println("B. Bagaimana keaadaan dinding");
+        System.out.println("B. Bagaimana keaadaan dinding?");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setPilih_dinding(scan.nextInt());
         System.out.println("Kondisi dinding :"+string2());
                 
-        System.out.println("C. Bagaimana keaadaan atap");
+        System.out.println("C. Bagaimana keaadaan atap?");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");  
         setPilih_atap(scan.nextInt());
         System.out.println("Kondisi atap :"+string3());
         
-        System.out.println("D. Bagaimana keaadaan pintu");
+        System.out.println("D. Bagaimana keaadaan pintu?");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
         setPilih_pintu(scan.nextInt());
         System.out.println("Kondisi pintu :"+string4());
         
-        System.out.println("E. Bagaimana keaadaan jendela");
+        System.out.println("E. Bagaimana keaadaan jendela?");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
@@ -128,24 +120,24 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
     public void deklarasi2() {
         System.out.println(getKondisi());
         setKondisiLingkungan(1);
-        System.out.println("A. Bagaimana sirkulasi udara kelas");
+        System.out.println("A. Bagaimana sirkulasi udara kelas?");
         System.out.println("1. lancar");
         System.out.println("2. tidak lancar");
         System.out.print("Jawab : ");
         setPilih_sirkulasi(scan.nextInt());
         System.out.println("Sirkulasi udara : "+string6());
         
-        System.out.println("B. Berapa nilai pencayahan kelas");
+        System.out.println("B. Berapa nilai pencayahan kelas?");
         System.out.print("jawab : ");
         setPencayahan(scan.nextInt());
         System.out.println("Pencayahan :"+pencayahan());
                 
-        System.out.println("C. Berapa nilai kelembapan kelas");
+        System.out.println("C. Berapa nilai kelembapan kelas?");
         System.out.print("jawab : ");
         setKelembapan(scan.nextInt());
         System.out.println("Kelembapan :"+kelembapan());
         
-        System.out.println("D. Berapa nilai suhu ruangan");
+        System.out.println("D. Berapa nilai suhu ruangan?");
         System.out.print("jawab : ");
         setSuhu(scan.nextInt());
         System.out.println("Suhu :"+suhu());
