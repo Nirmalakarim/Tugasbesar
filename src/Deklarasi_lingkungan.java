@@ -4,10 +4,7 @@
  */
 import java.util.Scanner;
 
-/**
- *
- * @author NirmalaKarim
- */
+
 public class Deklarasi_lingkungan {
     Scanner scan = new Scanner(System.in);
     void deklarasi (){
