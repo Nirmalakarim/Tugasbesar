@@ -12,10 +12,6 @@ import java.io.ObjectOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author NirmalaKarim
- */
 public class Lingkungan extends Ruangkelas implements Deklarasi{
     Input_lingkungan test = new Input_lingkungan();
     public Lingkungan(String kondisi) {//konstraktor
