@@ -4,10 +4,7 @@
  */
 import java.io.Serializable;
 
-/**
- *
- * @author NirmalaKarim
- */
+
 public class Input_lingkungan implements Serializable{
     private int pilih_atap;
     private int pilih_dinding;
