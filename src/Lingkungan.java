@@ -3,72 +3,23 @@
  * and open the template in the editor.
  */
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author NirmalaKarim
  */
 public class Lingkungan extends Ruangkelas implements Deklarasi{
-    private int pilih_atap;
-    private int pilih_dinding;
-    private int pilih_jendela;
-    private int pilih_pintu;
-    private int pilih_lantai;
-    private int pilih_sirkulasi;
+    Input_lingkungan test = new Input_lingkungan();
     public Lingkungan(String kondisi) {//konstraktor
         super(kondisi);
-    }
-    
-    //enkapsulasi
-    public int getPilih_atap() {
-        return pilih_atap;
-    }
-
-    public void setPilih_atap(int pilih_atap) {
-        this.pilih_atap = pilih_atap;
-    }
-
-    public int getPilih_dinding() {
-        return pilih_dinding;
-    }
-
-    public void setPilih_dinding(int pilih_dinding) {
-        this.pilih_dinding = pilih_dinding;
-    }
-
-    public int getPilih_jendela() {
-        return pilih_jendela;
-    }
-
-    public void setPilih_jendela(int pilih_jendela) {
-        this.pilih_jendela = pilih_jendela;
-    }
-
-    public int getPilih_pintu() {
-        return pilih_pintu;
-    }
-
-    public void setPilih_pintu(int pilih_pintu) {
-        this.pilih_pintu = pilih_pintu;
-    }
-
-    public int getPilih_lantai() {
-        return pilih_lantai;
-    }
-
-    public void setPilih_lantai(int pilih_lantai) {
-        this.pilih_lantai = pilih_lantai;
-    }
-
-    public int getPilih_sirkulasi() {
-        return pilih_sirkulasi;
-    }
-
-    public void setPilih_sirkulasi(int pilih_sirkulasi) {
-        this.pilih_sirkulasi = pilih_sirkulasi;
     }
     
     @Override
@@ -79,51 +30,63 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
         System.out.println("1. bersih ");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
-        setPilih_lantai(scan.nextInt());
+        test.setPilih_lantai(scan.nextInt());
         System.out.println("Kondisi lantai :"+string1());
         
         System.out.println("B. Bagaimana keaadaan dinding");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
-        setPilih_dinding(scan.nextInt());
+        test.setPilih_dinding(scan.nextInt());
         System.out.println("Kondisi dinding :"+string2());
                 
         System.out.println("C. Bagaimana keaadaan atap");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");  
-        setPilih_atap(scan.nextInt());
+        test.setPilih_atap(scan.nextInt());
         System.out.println("Kondisi atap :"+string3());
         
         System.out.println("D. Bagaimana keaadaan pintu");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
-        setPilih_pintu(scan.nextInt());
+        test.setPilih_pintu(scan.nextInt());
         System.out.println("Kondisi pintu :"+string4());
         
         System.out.println("E. Bagaimana keaadaan jendela");
         System.out.println("1. bersih");
         System.out.println("2. tidak bersih");
         System.out.print("Jawab : ");
-        setPilih_jendela(scan.nextInt());
+        test.setPilih_jendela(scan.nextInt());
         System.out.println("Kondisi jendela :"+string5());
-            try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
-                ObjectOutputStream os;
-                os = new ObjectOutputStream(fs);
-                os.writeObject(getPilih_lantai());
-                os.writeObject(getPilih_dinding());
-                os.writeObject(getPilih_jendela());
-                os.writeObject(getPilih_atap());
-                os.writeObject(getPilih_pintu());
-                os.close();
-                
-            } catch(IOException e){
+        System.out.println("");
+        try(FileOutputStream fs = new FileOutputStream("data.txt")){
+                ObjectOutputStream ob = new ObjectOutputStream(fs);
+                ob.writeObject(test);
+                ob.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        
+            try (FileInputStream fs = new FileInputStream("data.txt")){
+                ObjectInputStream ib = new ObjectInputStream(fs);
+                Input_lingkungan il = (Input_lingkungan) ib.readObject();
+                System.out.println("Lantai "+il.getPilih_lantai());
+                System.out.println("Atap "+il.getPilih_atap());
+                System.out.println("Dinding "+il.getPilih_dinding());
+                System.out.println("Jendela "+il.getPilih_jendela());
+                System.out.println("Pintu "+il.getPilih_pintu());
+                ib.close();
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Lingkungan.class.getName()).log(Level.SEVERE, null, ex);
+            }catch(IOException e){
                 e.printStackTrace();
             }
     }
-
+    void saving_objek(){
+        
+    }
     @Override
     public void deklarasi2() {
         System.out.println(getKondisi());
@@ -132,83 +95,95 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
         System.out.println("1. lancar");
         System.out.println("2. tidak lancar");
         System.out.print("Jawab : ");
-        setPilih_sirkulasi(scan.nextInt());
+        test.setPilih_sirkulasi(scan.nextInt());
         System.out.println("Sirkulasi udara : "+string6());
         
         System.out.println("B. Berapa nilai pencayahan kelas");
         System.out.print("jawab : ");
-        setPencayahan(scan.nextInt());
+        test.setPencayahan(scan.nextInt());
         System.out.println("Pencayahan :"+pencayahan());
                 
         System.out.println("C. Berapa nilai kelembapan kelas");
         System.out.print("jawab : ");
-        setKelembapan(scan.nextInt());
+        test.setKelembapan(scan.nextInt());
         System.out.println("Kelembapan :"+kelembapan());
         
         System.out.println("D. Berapa nilai suhu ruangan");
         System.out.print("jawab : ");
-        setSuhu(scan.nextInt());
+        test.setSuhu(scan.nextInt());
         System.out.println("Suhu :"+suhu());
+        System.out.println("");
+        try(FileOutputStream fs = new FileOutputStream("data.txt")){
+                ObjectOutputStream ob = new ObjectOutputStream(fs);
+                ob.writeObject(test);
+                ob.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
         
-        try(FileOutputStream fs = new FileOutputStream("penyimpanan.txt")){
-            ObjectOutputStream os = new ObjectOutputStream(fs);
-            os.writeObject(getPilih_sirkulasi());
-            os.writeObject(getPencayahan());
-            os.writeObject(getKelembapan());
-            os.writeObject(getSuhu());
-            os.close();
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+            try (FileInputStream fs = new FileInputStream("data.txt")){
+                ObjectInputStream ib = new ObjectInputStream(fs);
+                Input_lingkungan il = (Input_lingkungan) ib.readObject();
+                System.out.println("Sirkulasi udara "+il.getPilih_sirkulasi());
+                System.out.println("Pencayahan "+il.getPencayahan());
+                System.out.println("Kelembapan "+il.getKelembapan());
+                System.out.println("Suhu "+il.getSuhu());
+                ib.close();
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Lingkungan.class.getName()).log(Level.SEVERE, null, ex);
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        
     }
     
     
     
     @Override
     String string1() {   //kebersihan lantai   
-        a=getPilih_lantai();
+        a=test.getPilih_lantai();
         b=getLantai();
         return super.string1();
     }
 
     @Override
     String string2() {//kebersihan dinding
-        a=getPilih_dinding();
+        a=test.getPilih_dinding();
         b=getDinding();
         return super.string2();
     }
     
     @Override
     String string3() {//kebersihan atap
-        a=getPilih_atap();
+        a=test.getPilih_atap();
         b=getAtap();
         return super.string3();
     }
 
     @Override
     String string4() {// kebersihan pintu
-        a=getPilih_pintu();
+        a=test.getPilih_pintu();
         b=getPintu();
         return super.string4();
     }
 
     @Override
     String string5() {//kebersihan jendela
-        a=getPilih_jendela();
+        a=test.getPilih_jendela();
         b=getJendela();
         return super.string5();
     }
 
     @Override
     String string6() {//sirkulasi udara
-        a=getPilih_sirkulasi();
+        a=test.getPilih_sirkulasi();
         b=getSirkulasi_udara();
         return super.string6();
     }
     
     String pencayahan(){
         String pilih;
-        if(getPencayahan()>=250 && getPencayahan()<=350){
+        if(test.getPencayahan()>=250 && test.getPencayahan()<=350){
             pilih = "sesuai";
         }else{
             pilih = "tidak sesuai";
@@ -217,7 +192,7 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
     }
     String kelembapan(){
         String pilih;
-        if(getKelembapan()>=70 && getKelembapan()<=80){
+        if(test.getKelembapan()>=70 && test.getKelembapan()<=80){
             pilih="sesuai";
         }else{
             pilih="tidak sesuai";
@@ -226,7 +201,7 @@ public class Lingkungan extends Ruangkelas implements Deklarasi{
     }
     String suhu(){
         String pilih;
-        if(getSuhu()>=25 && getSuhu()<=35){
+        if(test.getSuhu()>=25 && test.getSuhu()<=35){
             pilih = "sesuai";
         }else{
             pilih="tidak sesuai";
