@@ -157,7 +157,7 @@ public class Fasilitas extends Ruangkelas implements Deklarasi{
                 e.printStackTrace();
             }
         
-            try (FileInputStream fs = new FileInputStream("data.txt")){
+        try (FileInputStream fs = new FileInputStream("data.txt")){
                 ObjectInputStream ib = new ObjectInputStream(fs);
                 Input_Fasilitas inf = (Input_Fasilitas) ib.readObject();
                 System.out.println("Jumlah steker "+inf.getJumlahsteker());

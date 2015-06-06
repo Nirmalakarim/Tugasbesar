@@ -121,7 +121,7 @@ public class Kenyamanan extends Ruangkelas implements Deklarasi{
                 e.printStackTrace();
             }
         
-            try (FileInputStream fs = new FileInputStream("data.txt")){
+        try (FileInputStream fs = new FileInputStream("data.txt")){
                 ObjectInputStream ib = new ObjectInputStream(fs);
                 Input_kenyamanan it = (Input_kenyamanan) ib.readObject();
                 System.out.println("Kekokohan "+it.getPilih_kekokohan());
