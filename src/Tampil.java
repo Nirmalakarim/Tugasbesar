@@ -1,13 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-/**
- *
- * @author NirmalaKarim
- */
 public class Tampil {
     public static void main(String[] args) {
         Deklarasi_Lingkungan test1 = new Deklarasi_Lingkungan();
