@@ -14,13 +14,14 @@ import java.util.logging.Logger;
  * @author NirmalaKarim
  */
 public class Fasilitas extends Ruangkelas implements Deklarasi{
-    Input_Fasilitas test = new Input_Fasilitas();
+    Input_Fasilitas test = new Input_Fasilitas("Fasilitas");
     public Fasilitas(String kondisi) {
         super(kondisi);
     }
 
     @Override
     void deklarasi1() {
+        
         setFasilitas("TugasBesar", "java");
         setFasilitas(2, 3, 3, 1);
         setFasilitas(1, 1, 1, 1, 1, 1);

@@ -2,13 +2,18 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import java.io.Serializable;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author NirmalaKarim
  */
-public class Input_Fasilitas implements Serializable{
+public class Input_Fasilitas extends Ruangkelas implements Serializable {
+     public Input_Fasilitas(String kondisi) {
+        super(kondisi);
+    }
     private int pilih_kondisisteker;
     private int pilih_kondisilampu;
     private int pilih_kondisikabel;
@@ -200,4 +205,220 @@ public class Input_Fasilitas implements Serializable{
     }
     
     
+    String JumlahSteker (){
+        String pilih ;
+        if(getJumlahsteker()>=4){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+
+    
+    @Override
+    String string1() {
+        a=getPilih_kondisisteker();
+        b=getKondisisteker();
+
+        return super.string1();
+    }
+
+    @Override
+    String string2() {
+        a=getPilih_kondisikabel();
+        b=getKondisikabelLCD();
+        return super.string2();
+    }
+
+    @Override
+    String string3() {
+        a=getPilih_kondisilampu();
+        b=getKondisilampu();
+        return super.string3();
+    }
+
+    @Override
+    String string4() {
+        a=getPilih_kondisikipas();
+        b=getKondisikipasangin();
+        return super.string4();
+    }
+
+    @Override
+    String string5() {
+        a=getPilih_kondisiac();
+        b=getKondisiAC();
+        return super.string5();
+    }
+
+    @Override
+    String string6() {
+        a=getPilih_kondisicctv();
+        b=getKondisiCCTV();
+        return super.string6();
+    }
+    
+    
+    String posisiSteker (){
+        String pilih ;
+        if(getPosisisteker()>=0){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String JumlahKabelLCD(){
+        String pilih;
+        if(getJumlahkabelLCD()>=1){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String PosisiKabelLCD(){
+        String pilih;
+        if(getPilih_posisikabel()==getPosisikabelLCD()){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String JumlahLampu(){
+        String pilih;
+        if(getJumlahlampu()>=18){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String PosisiLampu(){
+        String pilih;
+        if(getPilih_posisilampu()==getPosisilampu()){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String JumlahKipasAngin(){
+        String pilih;
+        if(getJumlahkipasangin()>=2){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String PosisiKipasAngin(){
+        String pilih;
+        if(getPilih_posisikipas()==getPosisikipasangin()){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String JumlahAC(){
+        String pilih;
+        if(getJumlahAC()>=1){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String PosisiAC(){
+        String pilih;
+        if(getPilih_posisiac()== getPosisiAC()){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String JumlahCCTV(){
+        String pilih;
+        if(getJumlahCCTV()==2){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String PosisiCCTV(){
+        String pilih;
+        if(getPosisiCCTV()==1&&getPosisiCCTV()==3){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String SSID(){
+        String pilih;
+        if(getSSID()==0){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih = "tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String loginusername(){
+        String pilih;
+        if(getPilih_username() .equals(getUsername())){
+            pilih ="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    String loginpasword(){
+        String pilih;
+        if (getPilih_pasword().equals(getPasword())){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else{
+            pilih ="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+            
+        }
+        return pilih;
+    }
+    @Override
+    void deklarasi1() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

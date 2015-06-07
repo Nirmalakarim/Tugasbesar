@@ -2,7 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import java.io.Serializable;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -90,6 +92,45 @@ public class Input_identitas implements Serializable{
     public void setJumlah_pintu(int jumlah_pintu) {
         this.jumlah_pintu = jumlah_pintu;
     }
+    double luas (){        
+        return Panjang_ruang* Lebar_ruang;
+    }
+    String bentuk(){
+        String pilih;
+        if(Panjang_ruang!=luas()){
+            pilih="persegi panjang dan sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        } else{
+            pilih="bukan persegi panjang";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
+    double rasio(){
+        return luas()/Jumlah_kursi;        
+    }
     
-    
+    String analisisPintuDanJendela(){
+        String satu;
+                if(getJumlah_pintu() >=2&&getJumlah_jendela()>=1){
+                    satu="sesuai";
+                    JOptionPane.showMessageDialog(null, satu);
+                }
+                else{
+                    satu="Tidak sesuai";
+                    JOptionPane.showMessageDialog(null, satu);
+                }
+                return satu;
+    }
+    String Analisis_rasio(){
+        String pilih;
+        if(rasio()>=0.5){
+            pilih="sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }else {
+            pilih="tidak sesuai";
+            JOptionPane.showMessageDialog(null, pilih);
+        }
+        return pilih;
+    }
 }
