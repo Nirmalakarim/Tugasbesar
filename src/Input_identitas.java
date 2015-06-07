@@ -1,13 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.Serializable;
 
-/**
- *
- * @author NirmalaKarim
- */
+
 public class Input_identitas implements Serializable{
     private String Nama_ruang;
     private String Lokasi_ruang;
