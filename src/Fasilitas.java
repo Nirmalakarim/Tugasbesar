@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,10 +5,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-/**
- *
- * @author NirmalaKarim
- */
+
 public class Fasilitas extends Ruangkelas implements Deklarasi{
     Input_Fasilitas test = new Input_Fasilitas();
     public Fasilitas(String kondisi) {
