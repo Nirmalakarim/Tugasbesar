@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.Serializable;
 
-/**
- *
- * @author NirmalaKarim
- */
 public class Input_kenyamanan implements Serializable{
     private int pilih_kebisingan;
     private int pilih_bau;
